@@ -14,17 +14,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://christy.ketteringpro.com"),
-  title: "Christy Kettering Hashey | AI Strategist & Founder",
-  description:
-    "Founder of Kettering Professional Services (KPS) — building innovative AI-driven solutions across strategy, automation, and experience design.",
   icons: {
-    icon: [
-      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-180.png", sizes: "180x180", type: "image/png" },
-      { url: "/favicon-512.png", sizes: "512x512", type: "image/png" },
-      { url: "/favicon.ico", type: "image/x-icon" },
-    ],
-    apple: { url: "/favicon-180.png" },
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
   openGraph: {
     title: "Christy Kettering Hashey | AI Strategist & Founder",
@@ -34,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "Christy Kettering Hashey",
     images: [
       {
-        url: "/favicon-512.png",
+        url: "/favicon.png",
         width: 512,
         height: 512,
         alt: "Christy Kettering Hashey",
@@ -48,7 +41,7 @@ export const metadata: Metadata = {
     title: "Christy Kettering Hashey | AI Strategist & Founder",
     description:
       "Founder of Kettering Professional Services (KPS) — AI, automation, and digital transformation strategy for businesses and creative professionals.",
-    images: ["/favicon-512.png"],
+    images: ["/favicon.png"],
   },
 };
 
