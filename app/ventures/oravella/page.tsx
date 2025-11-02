@@ -28,6 +28,17 @@ export default function OravellaPage() {
           redefining how salons, spas, and beauty professionals manage scheduling,
           communication, product inventory, and client satisfaction.
         </p>
+        <section className="max-w-3xl mx-auto py-12 px-4">
+        <h2 className="text-xl font-semibold text-white mb-4">The Problem</h2>
+        <p className="text-gray-300 leading-relaxed">
+          Salon and spa owners are buried in admin chaos — juggling schedules,
+          managing rooms and inventory, and trying to keep up with client expectations
+          across multiple tools. The problem isn’t passion — it’s fragmentation.{" "}
+          <strong className="text-white">Oravella</strong> brings every moving part
+          of your beauty business into one intuitive platform, so you can focus on
+          the craft and the client.
+        </p>
+      </section>
         <button
           disabled
           className="inline-block bg-[#475569] text-[#E2E8F0] px-6 py-3 rounded-lg font-semibold opacity-70 cursor-not-allowed"

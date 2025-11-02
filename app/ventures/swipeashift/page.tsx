@@ -34,6 +34,17 @@ export default function SwipePage() {
                   Gig marketplace connecting restaurants with on-demand staff for seamless
                   shift coverage and flexible scheduling.
                 </p>
+                <section className="max-w-md mx-0 mt-6">
+                <h2 className="text-xl font-semibold text-white mb-4">The Problem</h2>
+                <p className="text-gray-300 leading-relaxed">
+                  Restaurants depend on seamless staffing — but unexpected call-outs,
+                  seasonal demand, and limited worker availability make coverage a constant
+                  struggle. The problem isn’t talent — it’s connection.{" "}
+                  <strong className="text-white">Swipe-A-Shift</strong> links open shifts
+                  with qualified workers instantly, helping venues stay staffed and workers
+                  stay booked.
+                </p>
+              </section>
               </div>
               <div className="flex flex-wrap gap-3 justify-center md:justify-start mt-6">
                 <a

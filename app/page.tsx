@@ -55,6 +55,117 @@ function Badge({ children }: { children: React.ReactNode }) {
   );
 }
 
+import Ventures from "./components/Ventures"; {
+  const ventures = [
+    {
+      href: "/kais",
+      title: "Kettering AI Strategies",
+      status: "Active",
+      blurb:
+        "AI readiness & strategic planning consulting for enterprise PMOs and transformation leaders.",
+      details:
+        "Providing tailored AI strategy consulting to help enterprises integrate AI into their project management and transformation initiatives, ensuring measurable business impact.",
+      links: [
+        { label: "Learn More", url: "/kais" },
+        { label: "Contact", url: "/contact" },
+      ],
+    },
+    {
+      href: "/kwai",
+      title: "KetteringWorks.AI",
+      status: "Active",
+      blurb:
+        "Automation & workflow enablement for small businesses.",
+      details:
+        "Empowering small businesses with AI-driven automation solutions to streamline operations, reduce costs, and enhance productivity.",
+      links: [
+        { label: "Explore KetteringWorks.AI", url: "/kwai" },
+      ],
+    },
+    {
+      href: "/groovinfly",
+      title: "GroovinFly",
+      status: "Active",
+      blurb:
+        "Lifestyle travel & festival experiences for women who love to explore.",
+      details:
+        "Curating unique travel and festival experiences designed specifically for adventurous women seeking community and inspiration.",
+      links: [
+        { label: "Visit GroovinFly", url: "/groovinfly" },
+      ],
+    },
+    {
+      href: "/swipe",
+      title: "Swipe-A-Shift",
+      status: "Coming Soon",
+      blurb:
+        "Gig work marketplace for hospitality staffing and shift automation.",
+      details:
+        "An upcoming platform to connect hospitality workers with shifts efficiently, using AI to optimize staffing and scheduling.",
+      links: [],
+    },
+    {
+      href: "/oravella",
+      title: "Oravella",
+      status: "Coming Soon",
+      blurb:
+        "Scheduling & operations platform for salons & spas.",
+      details:
+        "A forthcoming solution to simplify scheduling and operations for salons and spas, enhancing customer experience and business efficiency.",
+      links: [],
+    },
+    {
+      href: "/dhi",
+      title: "Digital Humanity Index (DHI)",
+      status: "Concept",
+      blurb:
+        "Digital authenticity & reputation framework for creators.",
+      details:
+        "Developing a new framework to help digital creators build and maintain authentic reputations in online communities.",
+      links: [],
+    },
+  ];
+
+   (
+    <Section className="scroll-mt-24" id="ventures">
+      <h2 className="text-2xl font-semibold text-[#F1F5F9]">Ventures</h2>
+      <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {ventures.map((v) => (
+          <Link
+            key={v.href}
+            href={v.href}
+            className="group rounded-2xl border border-slate-700 p-5 hover:bg-[#1E293B] transition block relative"
+          >
+            <div className="flex items-center justify-between gap-3 flex-wrap sm:flex-nowrap">
+              <h3 className="text-lg font-semibold text-[#F1F5F9]">{v.title}</h3>
+              <Badge>{v.status}</Badge>
+            </div>
+            <p className="mt-2 text-sm text-[#CBD5E1]">{v.blurb}</p>
+            <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity text-[#94A3B8] text-xs max-h-40 overflow-y-auto">
+              <p>{v.details}</p>
+              {v.links.length > 0 && (
+                <ul className="mt-2 space-y-1">
+                  {v.links.map((link) => (
+                    <li key={link.url}>
+                      <Link
+                        href={link.url}
+                        className="text-[#22D3EE] hover:text-[#38BDF8] underline"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </Link>
+        ))}
+      </div>
+    </Section>
+  );
+}
+
 export default function Home() {
   return (
     <main className="space-y-24 pb-24 bg-[#0B1120] text-[#E2E8F0]">
@@ -104,67 +215,7 @@ export default function Home() {
       </div>
 
       {/* VENTURES */}
-      <Section className="scroll-mt-24" id="ventures">
-        <h2 className="text-2xl font-semibold text-[#F1F5F9]">Ventures</h2>
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {[
-            {
-              href: "/kais",
-              title: "Kettering AI Strategies",
-              status: "Active",
-              blurb:
-                "AI readiness & strategic planning consulting for enterprise PMOs and transformation leaders.",
-            },
-            {
-              href: "/kwai",
-              title: "KetteringWorks.AI",
-              status: "Active",
-              blurb:
-                "Automation & workflow enablement for small businesses.",
-            },
-            {
-              href: "/groovinfly",
-              title: "GroovinFly",
-              status: "Active",
-              blurb:
-                "Lifestyle travel & festival experiences for women who love to explore.",
-            },
-            {
-              href: "/swipe",
-              title: "Swipe-A-Shift",
-              status: "Coming Soon",
-              blurb:
-                "Gig work marketplace for hospitality staffing and shift automation.",
-            },
-            {
-              href: "/oravella",
-              title: "Oravella",
-              status: "Coming Soon",
-              blurb:
-                "Scheduling & operations platform for salons & spas.",
-            },
-            {
-              href: "/dhi",
-              title: "Digital Humanity Index (DHI)",
-              status: "Concept",
-              blurb:
-                "Digital authenticity & reputation framework for creators.",
-            },
-          ].map((v) => (
-            <Link
-              key={v.href}
-              href={v.href}
-              className="rounded-2xl border border-slate-700 p-5 hover:bg-[#1E293B] transition block"
-            >
-              <div className="flex items-center justify-between gap-3 flex-wrap sm:flex-nowrap">
-                <h3 className="text-lg font-semibold text-[#F1F5F9]">{v.title}</h3>
-                <Badge>{v.status}</Badge>
-              </div>
-              <p className="mt-2 text-sm text-[#CBD5E1]">{v.blurb}</p>
-            </Link>
-          ))}
-        </div>
-      </Section>
+      <Ventures />
 
       {/* BRANDS */}
       <Section>

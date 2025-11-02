@@ -73,6 +73,14 @@ export default function GroovinFlyPage() {
             with all logistics handled by our team so guests can focus on
             enjoying the experience.
           </p>
+          <section className="mt-8">
+            <h2 className="text-xl font-semibold text-white mb-4">The Problem</h2>
+            <p className="text-gray-300 leading-relaxed">
+              You’ve got the freedom, curiosity, and desire to travel — but planning it all, finding the right people, and coordinating the details alone can be daunting. The problem isn’t possibility — it’s the planning. <strong className="text-white">GroovinFly</strong> takes care of the logistics — the tickets, the lodging, the coordination — so you can just arrive, find your tribe, and enjoy the vibe.
+            </p>
+          </section>
+        
+        
         </section>
 
         {/* Tech Stack Section */}

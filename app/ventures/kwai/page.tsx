@@ -27,6 +27,17 @@ export default function KWAIPage() {
           Empowering small businesses to automate workflows, streamline
           operations, and scale smarter with AI-powered systems.
         </p>
+
+        <section className="max-w-3xl mx-auto py-12 px-4">
+        <h2 className="text-xl font-semibold text-white mb-4">The Problem</h2>
+        <p className="text-gray-300 leading-relaxed">
+          Small business owners are drowning in admin — scheduling, invoices, emails,
+          and endless tasks that eat away at every day. The problem isn’t effort —
+          it’s inefficiency.{" "}
+          <strong className="text-white">KetteringWorks.AI</strong> eliminates the
+          busywork so business owners can focus on growth, creativity, and customers.
+        </p>
+        </section>
         <div className="text-center mb-8">
           <div className="text-lg font-semibold mb-2">What We Do</div>
           <ul className="text-[#CBD5E1] mb-8 leading-relaxed list-disc list-inside text-center space-y-2">

@@ -27,6 +27,19 @@ export default function KAISPage() {
           organizations move from curiosity to confident adoption through
           practical sprints and automation roadmaps.
         </p>
+        <section className="max-w-3xl mx-auto py-12 px-4">
+          <h2 className="text-xl font-semibold text-white mb-4">The Problem</h2>
+          <p className="text-gray-300 leading-relaxed">
+            Organizations know AI can transform how they operate — but between unclear
+            requirements, slow planning cycles, and competing priorities, progress
+            stalls before it starts. The problem isn’t vision — it’s execution.
+            <strong className="text-white">
+              {" "}Kettering AI Strategies (KAIS)
+            </strong>{" "}
+            closes that gap, turning complex strategy into actionable, measurable
+            outcomes in days, not months.
+          </p>
+        </section>
         <section className="mt-8 text-center">
           <h2 className="text-xl font-semibold text-[#F1F5F9] mb-3">What We Do</h2>
           <ul className="list-disc list-inside mx-auto inline-block text-left space-y-2 text-[#CBD5E1] mb-8">
