@@ -25,16 +25,16 @@ export default function ContactPage() {
         </a>
 
         <p className="text-[#94A3B8] mt-6">
-          Founder of the{" "}
+          Founder of{" "}
           <a
             href="https://ketteringpro.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#22D3EE] hover:text-[#38BDF8]"
           >
-            Kettering Professional Services
+            KetteringPro Enterprise
           </a>{" "}
-          — the umbrella for all ventures featured here.
+          — the holding company for all ventures featured here.
         </p>
 
         <div className="mt-10">

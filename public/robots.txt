@@ -1,0 +1,4 @@
+
+# Block strategy page from search engines
+User-agent: *
+Disallow: /strategy

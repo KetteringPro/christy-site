@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Urbanist } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const urbanist = Urbanist({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-urbanist",
 });
 
 export const metadata: Metadata = {
@@ -22,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Christy Kettering Hashey | AI Strategist & Founder",
     description:
-      "Founder of Kettering Professional Services (KPS) — AI, automation, and digital transformation strategy for businesses and creative professionals.",
+      "Founder of KetteringPro Enterprise (KPE) — AI, automation, and digital transformation strategy for businesses and creative professionals.",
     url: "https://christy.ketteringpro.com",
     siteName: "Christy Kettering Hashey",
     images: [
@@ -40,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Christy Kettering Hashey | AI Strategist & Founder",
     description:
-      "Founder of Kettering Professional Services (KPS) — AI, automation, and digital transformation strategy for businesses and creative professionals.",
+      "Founder of KetteringPro Enterprise (KPE) — AI, automation, and digital transformation strategy for businesses and creative professionals.",
     images: ["/favicon.png"],
   },
 };
@@ -53,12 +49,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${urbanist.variable} font-sans antialiased`}
       >
         {children}
 
         <footer className="text-center text-[#94A3B8] mt-16 mb-6 text-sm">
-        © {new Date().getFullYear()} Kettering Professional Services ·
+        © {new Date().getFullYear()} KetteringPro Enterprise ·
         <a
           href="https://ketteringpro.com"
           target="_blank"

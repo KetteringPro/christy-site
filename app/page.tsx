@@ -1,12 +1,12 @@
 export const metadata = {
   metadataBase: new URL("https://christy.ketteringpro.com"),
-  title: "Christy Kettering Hashey | AI Strategist & Founder",
+  title: "Christy Kettering Hashey | Founder & Writer",
   description:
-    "AI-driven strategist, founder, and digital transformation consultant helping businesses bring big ideas to life. Explore ventures like KetteringWorks.AI, GroovinFly, and more.",
+    "Building a portfolio of AI-enabled ventures through KetteringPro Enterprise. Writer and producer of 'From Chaos to Clarity' — a romantic dramedy about entrepreneurship and life intertwined.",
   openGraph: {
-    title: "Christy Kettering Hashey | AI Strategist & Founder",
+    title: "Christy Kettering Hashey | Founder & Writer",
     description:
-      "AI-driven strategist, founder, and digital transformation consultant helping businesses bring big ideas to life.",
+      "Building a portfolio of AI-enabled ventures. Writer and producer of 'From Chaos to Clarity' — a romantic dramedy about entrepreneurship and life intertwined.",
     url: "https://christy.ketteringpro.com",
     siteName: "Christy Kettering Hashey",
     images: [
@@ -22,9 +22,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Christy Kettering Hashey | AI Strategist & Founder",
+    title: "Christy Kettering Hashey | Founder & Writer",
     description:
-      "AI-driven strategist, founder, and digital transformation consultant helping businesses bring big ideas to life.",
+      "Building a portfolio of AI-enabled ventures. Writer and producer of 'From Chaos to Clarity' — a romantic dramedy about entrepreneurship and life intertwined.",
     images: ["/images/social-preview.jpg"],
   },
 };
@@ -168,7 +168,7 @@ import Ventures from "./components/Ventures"; {
 
 export default function Home() {
   return (
-    <main className="space-y-24 pb-24 bg-[#0B1120] text-[#E2E8F0]">
+    <main className="space-y-12 pb-24 bg-[#0B1120] text-[#E2E8F0]">
       {/* HERO */}
       <div className="bg-[#0F172A] border-b border-slate-800">
         <Section className="pt-20 pb-16">
@@ -178,11 +178,10 @@ export default function Home() {
                 Christy Kettering Hashey
               </h1>
               <p className="mt-3 text-lg md:text-xl text-[#CBD5E1]">
-                AI-Driven Strategist • Founder • Digital Transformation
-                Consultant
+                Founder & CEO, KetteringPro Enterprise • Writer & Producer
               </p>
               <p className="mt-4 text-base md:text-lg text-[#CBD5E1] max-w-2xl">
-                I lead Kettering Professional Services (KPS)—a portfolio of ventures that merge AI strategy, automation, and experience design. I bridge business strategy and technical execution, delivering pragmatic systems and products that move the needle.
+                Building a portfolio of ventures that merge AI, lifestyle, and service innovation — from automation tools to festival travel experiences. I also write and produce "From Chaos to Clarity," a romantic dramedy inspired by the chaos of building multiple companies while actually living life. Turns out bringing clarity to business problems doesn't mean your personal life follows a strategic plan.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <Link

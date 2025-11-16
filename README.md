@@ -1,9 +1,9 @@
 # christy-site
-Personal portfolio site for Christy Kettering Hashey — AI-driven strategist, founder, and digital transformation consultant. Built with Next.js, Tailwind CSS, and deployed via Netlify under Kettering Professional Services.
+Personal portfolio site for Christy Kettering Hashey — AI-driven strategist, founder, and digital transformation consultant. Built with Next.js, Tailwind CSS, and deployed via Netlify under KetteringPro Enterpris Services.
 
 ## 📄 License
 
-© 2025 Kettering Professional Services and Christy Kettering Hashey.  
+© 2025 KetteringPro Enterprise LLC and Christy Kettering Hashey.  
 All rights reserved.
 
 This project is proprietary and not open source.  
