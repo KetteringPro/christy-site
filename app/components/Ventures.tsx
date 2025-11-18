@@ -72,7 +72,7 @@ const ventures = [
 const anchor = {
   name: "KetteringProductions.com",
   slug: "https://ketteringproductions.com",
-  status: "Reality Series",
+  status: "TV Dramedy Series",
   tagline:
     "Producing 'From Chaos to Clarity' — a romantic dramedy following the founder/CEO as she brings clarity to businesses while navigating the chaos of building multiple ventures and juggling wild personal life.",
   problem:
