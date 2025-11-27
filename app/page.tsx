@@ -1,20 +1,20 @@
 export const metadata = {
   metadataBase: new URL("https://christy.ketteringpro.com"),
-  title: "Christy Kettering Hashey | Founder & Writer",
+  title: "Christy Kettering  | Founder & Writer",
   description:
     "Building a portfolio of AI-enabled ventures through ketteringPro Enterprise. Writer and producer of 'From Chaos to Clarity' — a romantic dramedy about entrepreneurship and life intertwined.",
   openGraph: {
-    title: "Christy Kettering Hashey | Founder & Writer",
+    title: "Christy Kettering  | Founder & Writer",
     description:
       "Building a portfolio of AI-enabled ventures. Writer and producer of 'From Chaos to Clarity' — a romantic dramedy about entrepreneurship and life intertwined.",
     url: "https://christy.ketteringpro.com",
-    siteName: "Christy Kettering Hashey",
+    siteName: "Christy Kettering ",
     images: [
       {
         url: "/images/social-preview.jpg",
         width: 1200,
         height: 630,
-        alt: "Christy Kettering Hashey - Portfolio Preview",
+        alt: "Christy Kettering  - Portfolio Preview",
       },
     ],
     locale: "en_US",
@@ -22,7 +22,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Christy Kettering Hashey | Founder & Writer",
+    title: "Christy Kettering  | Founder & Writer",
     description:
       "Building a portfolio of AI-enabled ventures. Writer and producer of 'From Chaos to Clarity' — a romantic dramedy about entrepreneurship and life intertwined.",
     images: ["/images/social-preview.jpg"],
@@ -175,7 +175,7 @@ export default function Home() {
           <div className="grid md:grid-cols-12 gap-10 items-center">
             <div className="md:col-span-7">
               <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-[#F1F5F9]">
-                Christy Kettering Hashey
+                Christy Kettering 
               </h1>
               <p className="mt-3 text-lg md:text-xl text-[#CBD5E1]">
                 Founder & CEO, ketteringPro Enterprise • Writer & Producer
@@ -202,7 +202,7 @@ export default function Home() {
             <div className="md:col-span-5">
                 <Image
                   src="/images/christy.jpg"
-                  alt="Christy Kettering Hashey portrait"
+                  alt="Christy Kettering  portrait"
                   width={500}
                   height={400}
                   className="rounded-2xl object-cover glow-portrait"

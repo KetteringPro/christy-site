@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Contact | Christy Kettering Hashey",
+  title: "Contact | Christy Kettering ",
   description:
-    "Get in touch with Christy Kettering Hashey — AI strategist, founder, and digital transformation consultant.",
+    "Get in touch with Christy Kettering  — AI strategist, founder, and digital transformation consultant.",
 };
 
 export default function ContactPage() {

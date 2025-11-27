@@ -16,17 +16,17 @@ export const metadata: Metadata = {
     apple: "/favicon.png",
   },
   openGraph: {
-    title: "Christy Kettering Hashey | AI Strategist & Founder",
+    title: "Christy Kettering  | AI Strategist & Founder",
     description:
       "Founder of ketteringPro Enterprise (KPE) — AI, automation, and digital transformation strategy for businesses and creative professionals.",
     url: "https://christy.ketteringpro.com",
-    siteName: "Christy Kettering Hashey",
+    siteName: "Christy Kettering ",
     images: [
       {
         url: "/favicon.png",
         width: 512,
         height: 512,
-        alt: "Christy Kettering Hashey",
+        alt: "Christy Kettering ",
       },
     ],
     locale: "en_US",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Christy Kettering Hashey | AI Strategist & Founder",
+    title: "Christy Kettering  | AI Strategist & Founder",
     description:
       "Founder of ketteringPro Enterprise (KPE) — AI, automation, and digital transformation strategy for businesses and creative professionals.",
     images: ["/favicon.png"],
