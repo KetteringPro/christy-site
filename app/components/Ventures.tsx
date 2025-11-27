@@ -4,7 +4,7 @@ import Link from "next/link";
 
 // Hero - The Holding Company
 const hero = {
-  name: "KetteringPro Enterprise",
+  name: "ketteringPro Enterprise",
   slug: "/ventures/ketteringpro-enterprise",
   status: "Holding Company",
   tagline:
@@ -87,11 +87,11 @@ export default function Ventures() {
       {/* HERO - Holding Company */}
       <Link
         href={hero.slug}
-        className="group relative block rounded-xl border-2 border-cyan-500/50 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 hover:from-cyan-500/20 hover:to-blue-500/20 p-8 mb-8 transition-all duration-300"
+        className="group relative block rounded-xl border-2 border-purple-500/50 bg-gradient-to-br from-purple-500/10 to-pink-500/10 hover:from-purple-500/20 hover:to-pink-500/20 p-8 mb-8 transition-all duration-300"
       >
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-2xl font-bold text-white">{hero.name}</h3>
-          <span className="px-4 py-1.5 text-xs rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/50">
+          <span className="px-4 py-1.5 text-xs rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/50">
             {hero.status}
           </span>
         </div>

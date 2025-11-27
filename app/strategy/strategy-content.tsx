@@ -6,7 +6,7 @@ export default function StrategyContent() {
       {/* Header */}
       <header className="border-b border-gray-800 bg-[#0a0a0a] sticky top-0 z-50">
         <div className="max-w-5xl mx-auto px-6 py-6">
-          <h1 className="text-2xl font-bold">KetteringPro Enterprise</h1>
+          <h1 className="text-2xl font-bold">ketteringPro Enterprise</h1>
           <p className="text-gray-400 mt-1">Strategic Plan 2025-2035</p>
         </div>
       </header>
@@ -19,7 +19,7 @@ export default function StrategyContent() {
           <h2 className="text-3xl font-bold mb-6 text-blue-400">Executive Summary</h2>
           <div className="prose prose-invert max-w-none">
             <p className="text-lg text-gray-300 leading-relaxed mb-4">
-              KetteringPro Enterprise is building the operating system for service industries through a portfolio approach to vertical SaaS. By 2035, we aim to be a $10B-50B public company serving 500,000-1M businesses globally across 40-50+ industry verticals.
+              ketteringPro Enterprise is building the operating system for service industries through a portfolio approach to vertical SaaS. By 2035, we aim to be a $10B-50B public company serving 500,000-1M businesses globally across 40-50+ industry verticals.
             </p>
             <p className="text-gray-300 leading-relaxed mb-4">
               Our unique advantage: AI-assisted development enables rapid platform builds (1-2 months per MVP), authentic industry insights from founder's direct experience, and a diversified portfolio that mitigates single-platform risk while capturing economies of scale.
@@ -511,7 +511,7 @@ export default function StrategyContent() {
           <div className="bg-gradient-to-r from-blue-900/40 to-blue-800/40 border border-blue-700 rounded-lg p-8">
             <h2 className="text-3xl font-bold mb-4 text-white">The Vision</h2>
             <p className="text-xl text-gray-200 leading-relaxed mb-6">
-              By 2035, KetteringPro Enterprise will be the leading vertical SaaS portfolio company, operating 40-50+ platforms across service industries, serving 500,000-1M businesses globally, generating $500M-1B annual revenue, and valued at $10B-50B in public markets.
+              By 2035, ketteringPro Enterprise will be the leading vertical SaaS portfolio company, operating 40-50+ platforms across service industries, serving 500,000-1M businesses globally, generating $500M-1B annual revenue, and valued at $10B-50B in public markets.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
               The founder will be worth $3B-25B, living on a boat, working 10-20 hours/week, producing content, mentoring entrepreneurs, and proving that starting at 52 can build a generational empire.
@@ -524,7 +524,7 @@ export default function StrategyContent() {
       {/* Footer */}
       <footer className="border-t border-gray-800 py-8">
         <div className="max-w-5xl mx-auto px-6 text-center text-gray-500 text-sm">
-          <p>KetteringPro Enterprise Strategic Plan 2025-2035</p>
+          <p>ketteringPro Enterprise Strategic Plan 2025-2035</p>
           <p className="mt-2">Confidential - For Authorized Viewers Only</p>
           <p className="mt-4 text-xs">Document Version 1.0 | November 17, 2025</p>
         </div>

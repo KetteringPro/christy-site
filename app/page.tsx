@@ -2,7 +2,7 @@ export const metadata = {
   metadataBase: new URL("https://christy.ketteringpro.com"),
   title: "Christy Kettering Hashey | Founder & Writer",
   description:
-    "Building a portfolio of AI-enabled ventures through KetteringPro Enterprise. Writer and producer of 'From Chaos to Clarity' — a romantic dramedy about entrepreneurship and life intertwined.",
+    "Building a portfolio of AI-enabled ventures through ketteringPro Enterprise. Writer and producer of 'From Chaos to Clarity' — a romantic dramedy about entrepreneurship and life intertwined.",
   openGraph: {
     title: "Christy Kettering Hashey | Founder & Writer",
     description:
@@ -149,7 +149,7 @@ import Ventures from "./components/Ventures"; {
                     <li key={link.url}>
                       <Link
                         href={link.url}
-                        className="text-[#22D3EE] hover:text-[#38BDF8] underline"
+                        className="text-[#a855f7] hover:text-[#c084fc] underline"
                         onClick={(e) => e.stopPropagation()}
                       >
                         {link.label}
@@ -178,7 +178,7 @@ export default function Home() {
                 Christy Kettering Hashey
               </h1>
               <p className="mt-3 text-lg md:text-xl text-[#CBD5E1]">
-                Founder & CEO, KetteringPro Enterprise • Writer & Producer
+                Founder & CEO, ketteringPro Enterprise • Writer & Producer
               </p>
               <p className="mt-4 text-base md:text-lg text-[#CBD5E1] max-w-2xl">
                 Building a portfolio of ventures that merge AI, lifestyle, and service innovation — from automation tools to festival travel experiences. I also write and produce "From Chaos to Clarity," a romantic dramedy inspired by the chaos of building multiple companies while actually living life. Turns out bringing clarity to business problems doesn't mean your personal life follows a strategic plan.
@@ -186,14 +186,14 @@ export default function Home() {
               <div className="mt-6 flex flex-wrap gap-3">
                 <Link
                   href="/contact"
-                  className="bg-[#22D3EE] text-[#0B1120] rounded-lg px-5 py-3 text-sm font-semibold hover:bg-[#38BDF8] transition"
+                  className="bg-[#a855f7] text-[#0B1120] rounded-lg px-5 py-3 text-sm font-semibold hover:bg-[#c084fc] transition"
                 >
                   Let’s Connect
                 </Link>
                 <Link
                   href="#ventures"
                   
-                  className="border border-[#22D3EE] text-[#22D3EE] rounded-lg px-5 py-3 text-sm font-semibold hover:bg-[#22D3EE] hover:text-[#0B1120] transition"
+                  className="border border-[#a855f7] text-[#a855f7] rounded-lg px-5 py-3 text-sm font-semibold hover:bg-[#a855f7] hover:text-[#0B1120] transition"
                 >
                   Explore My Ventures
                 </Link>
@@ -244,7 +244,7 @@ export default function Home() {
           </p>
           <a
             href="mailto:christy@ketteringpro.com"
-            className="mt-6 inline-block text-[#22D3EE] font-medium hover:text-[#38BDF8] transition"
+            className="mt-6 inline-block text-[#a855f7] font-medium hover:text-[#c084fc] transition"
           >
             Email: christy@ketteringpro.com
           </a>

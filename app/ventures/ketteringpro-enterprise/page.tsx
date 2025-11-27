@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "KetteringPro Enterprise | Strategic Holding Company",
+  title: "ketteringPro Enterprise | Strategic Holding Company",
   description:
-    "KetteringPro Enterprise is a strategic holding company cultivating ventures at the intersection of AI, lifestyle, and service innovation.",
+    "ketteringPro Enterprise is a strategic holding company cultivating ventures at the intersection of AI, lifestyle, and service innovation.",
 };
 
 export default function KetteringProEnterprisePage() {
@@ -14,12 +14,16 @@ export default function KetteringProEnterprisePage() {
         {/* Hero Section */}
         <div className="flex flex-col md:flex-row items-center gap-10 mb-16">
           <div className="flex-1">
-            <div className="flex items-center gap-4 mb-4">
-              <h1 className="text-4xl md:text-5xl font-bold text-[#F1F5F9]">
-                KetteringPro Enterprise
-              </h1>
+            <div className="mb-6">
+              <Image
+                src="/images/kpe-logo.png"
+                alt="ketteringPro Enterprise"
+                width={280}
+                height={280}
+                className="rounded-xl"
+              />
             </div>
-            <p className="mt-4 text-lg text-[#CBD5E1]">
+            <p className="text-lg text-[#CBD5E1]">
               Strategic holding company cultivating ventures at the intersection
               of AI, lifestyle, and service innovation. Building a diversified
               portfolio of technology and experience-driven businesses that
@@ -27,15 +31,15 @@ export default function KetteringProEnterprisePage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="https://christy.ketteringpro.com"
+                href="https://ketteringpro.com"
                 target="_blank"
-                className="bg-[#22D3EE] text-[#0B1120] px-5 py-3 rounded-lg text-sm font-semibold hover:bg-[#38BDF8] transition"
+                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-5 py-3 rounded-lg text-sm font-semibold hover:opacity-90 transition"
               >
-                Visit Portfolio Site
+                Visit KPE Site
               </Link>
               <Link
                 href="/#ventures"
-                className="border border-[#22D3EE] text-[#22D3EE] px-5 py-3 rounded-lg text-sm font-semibold hover:bg-[#22D3EE] hover:text-[#0B1120] transition"
+                className="border border-[#a855f7] text-[#a855f7] px-5 py-3 rounded-lg text-sm font-semibold hover:bg-[#a855f7] hover:text-white transition"
               >
                 ← Back to Ventures
               </Link>
@@ -43,27 +47,19 @@ export default function KetteringProEnterprisePage() {
           </div>
 
           <div className="flex-1 relative">
-            <div className="absolute -inset-4 bg-gradient-to-r from-[#22D3EE]/40 to-[#3B82F6]/30 blur-3xl rounded-2xl"></div>
-            <div className="relative rounded-2xl bg-[#1E293B] border border-[#22D3EE]/30 p-8 shadow-lg">
+            <div className="absolute -inset-4 bg-gradient-to-r from-[#a855f7]/40 to-[#ec4899]/30 blur-3xl rounded-2xl"></div>
+            <div className="relative rounded-2xl bg-[#1E293B] border border-[#a855f7]/30 p-8 shadow-lg">
               <h3 className="text-2xl font-bold text-white mb-4">
                 The Portfolio
               </h3>
               <ul className="space-y-3 text-[#CBD5E1]">
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-green-400"></span>
-                  Kettering AI Strategies
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-green-400"></span>
-                  KetteringWorks.AI
+                  Swipe-A-Shift
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-green-400"></span>
                   Groovin&apos; Fly
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-yellow-400"></span>
-                  Swipe-A-Shift (Dec 2025)
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-yellow-400"></span>
@@ -84,7 +80,7 @@ export default function KetteringProEnterprisePage() {
             The Vision
           </h2>
           <p className="text-[#CBD5E1] leading-relaxed mb-6">
-            KetteringPro Enterprise operates as a strategic holding company,
+            ketteringPro Enterprise operates as a strategic holding company,
             building and nurturing a portfolio of ventures across AI
             consulting, automation tools, lifestyle experiences, and innovative
             service platforms. Each venture addresses specific market needs
@@ -111,7 +107,7 @@ export default function KetteringProEnterprisePage() {
               multiple ventures under one strategic umbrella. The digital
               transformation happening across every industry creates
               opportunities for AI-enabled solutions, automation tools, and
-              experience-driven businesses. KetteringPro Enterprise positions
+              experience-driven businesses. ketteringPro Enterprise positions
               itself at these intersections, building companies that leverage
               emerging technologies while staying deeply connected to human
               needs and authentic experiences.

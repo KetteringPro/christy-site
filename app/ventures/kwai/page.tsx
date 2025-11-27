@@ -51,14 +51,14 @@ export default function KWAIPage() {
           href="https://ketteringworks.ai"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-[#22D3EE] text-[#0B1120] px-6 py-3 rounded-lg font-semibold hover:bg-[#38BDF8] transition"
+          className="inline-block bg-[#a855f7] text-[#0B1120] px-6 py-3 rounded-lg font-semibold hover:bg-[#c084fc] transition"
         >
           Visit Site
         </a>
         <div className="mt-10">
           <Link
             href="/"
-            className="inline-block border border-[#22D3EE] text-[#22D3EE] px-5 py-3 rounded-lg text-sm font-semibold hover:bg-[#22D3EE] hover:text-[#0B1120] transition"
+            className="inline-block border border-[#a855f7] text-[#a855f7] px-5 py-3 rounded-lg text-sm font-semibold hover:bg-[#a855f7] hover:text-[#0B1120] transition"
           >
             ← Back to Home
           </Link>

@@ -19,7 +19,7 @@ export default function ContactPage() {
         </p>
         <a
           href="mailto:christy@ketteringpro.com"
-          className="inline-block bg-[#22D3EE] text-[#0B1120] px-6 py-3 rounded-lg font-semibold hover:bg-[#38BDF8] transition"
+          className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition"
         >
           Email: christy@ketteringpro.com
         </a>
@@ -30,9 +30,9 @@ export default function ContactPage() {
             href="https://ketteringpro.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#22D3EE] hover:text-[#38BDF8]"
+            className="text-[#a855f7] hover:text-[#c084fc]"
           >
-            KetteringPro Enterprise
+            ketteringPro Enterprise
           </a>{" "}
           — the holding company for all ventures featured here.
         </p>
@@ -40,7 +40,7 @@ export default function ContactPage() {
         <div className="mt-10">
           <Link
             href="/"
-            className="inline-block border border-[#22D3EE] text-[#22D3EE] px-5 py-3 rounded-lg text-sm font-semibold hover:bg-[#22D3EE] hover:text-[#0B1120] transition"
+            className="inline-block border border-[#a855f7] text-[#a855f7] px-5 py-3 rounded-lg text-sm font-semibold hover:bg-[#a855f7] hover:text-[#0B1120] transition"
           >
             ← Back to Home
           </Link>

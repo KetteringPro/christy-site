@@ -48,7 +48,7 @@ export default function OravellaPage() {
         <div className="mt-10">
           <Link
             href="/"
-            className="inline-block border border-[#22D3EE] text-[#22D3EE] px-5 py-3 rounded-lg text-sm font-semibold hover:bg-[#22D3EE] hover:text-[#0B1120] transition"
+            className="inline-block border border-[#a855f7] text-[#a855f7] px-5 py-3 rounded-lg text-sm font-semibold hover:bg-[#a855f7] hover:text-[#0B1120] transition"
           >
             ← Back to Home
           </Link>

@@ -36,13 +36,13 @@ export default function GroovinFlyPage() {
               <Link
                 href="https://groovinfly.com"
                 target="_blank"
-                className="bg-[#22D3EE] text-[#0B1120] px-5 py-3 rounded-lg text-sm font-semibold hover:bg-[#38BDF8] transition"
+                className="bg-[#a855f7] text-[#0B1120] px-5 py-3 rounded-lg text-sm font-semibold hover:bg-[#c084fc] transition"
               >
                 Visit GroovinFly
               </Link>
               <Link
                 href="/#ventures"
-                className="border border-[#22D3EE] text-[#22D3EE] px-5 py-3 rounded-lg text-sm font-semibold hover:bg-[#22D3EE] hover:text-[#0B1120] transition"
+                className="border border-[#a855f7] text-[#a855f7] px-5 py-3 rounded-lg text-sm font-semibold hover:bg-[#a855f7] hover:text-[#0B1120] transition"
               >
                 ← Back to Ventures
               </Link>
