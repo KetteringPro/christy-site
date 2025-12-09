@@ -58,31 +58,6 @@ function Badge({ children }: { children: React.ReactNode }) {
 import Ventures from "./components/Ventures"; {
   const ventures = [
     {
-      href: "/kais",
-      title: "Kettering AI Strategies",
-      status: "Active",
-      blurb:
-        "AI readiness & strategic planning consulting for enterprise PMOs and transformation leaders.",
-      details:
-        "Providing tailored AI strategy consulting to help enterprises integrate AI into their project management and transformation initiatives, ensuring measurable business impact.",
-      links: [
-        { label: "Learn More", url: "/kais" },
-        { label: "Contact", url: "/contact" },
-      ],
-    },
-    {
-      href: "/kwai",
-      title: "KetteringWorks.AI",
-      status: "Active",
-      blurb:
-        "Automation & workflow enablement for small businesses.",
-      details:
-        "Empowering small businesses with AI-driven automation solutions to streamline operations, reduce costs, and enhance productivity.",
-      links: [
-        { label: "Explore KetteringWorks.AI", url: "/kwai" },
-      ],
-    },
-    {
       href: "/groovinfly",
       title: "GroovinFly",
       status: "Active",

@@ -16,23 +16,6 @@ const hero = {
 // The Ventures Portfolio
 const ventures = [
   {
-    name: "Kettering AI Strategies",
-    slug: "/ventures/kais",
-    status: "Active",
-    tagline:
-      "AI readiness & strategic planning consulting for enterprise PMOs and transformation leaders.",
-    problem:
-      "Turn project chaos into clarity — reducing requirements, specs, and timelines from months to days.",
-  },
-  {
-    name: "KetteringWorks.AI",
-    slug: "/ventures/kwai",
-    status: "Active",
-    tagline: "Automation & workflow enablement for small businesses.",
-    problem:
-      "Reclaim your time by automating scheduling, invoices, and daily admin — minutes, not hours.",
-  },
-  {
     name: "Groovin' Fly",
     slug: "/ventures/groovinfly",
     status: "Active",
