@@ -27,19 +27,37 @@ const ventures = [
   {
     name: "Swipe-A-Shift",
     slug: "/ventures/swipeashift",
-    status: "Coming Dec 2025",
+    status: "Active",
     tagline:
       "Gig work marketplace for hospitality staffing and shift automation.",
     problem:
       "Fill shifts fast or find flexible work — Swipe-A-Shift handles the matching, insurance, and onboarding headaches.",
   },
   {
+    name: "BestLife4U",
+    slug: "/ventures/bestlife4u",
+    status: "Beta",
+    tagline:
+      "Life transitions made easier — divorce support, estate planning, and guided resolution.",
+    problem:
+      "When the future doesn't align with the original vision… we help make life transitions easier for you. Structured, AI-guided support with dignity and transparency.",
+  },
+  {
     name: "Oravella",
     slug: "/ventures/oravella",
-    status: "Coming Soon",
+    status: "Jan 2025",
     tagline: "Scheduling & operations platform for salons and spas.",
     problem:
       "Unify bookings, rooms, and reporting in one app — Oravella streamlines your tech so you can focus on clients.",
+  },
+  {
+    name: "Velocivia",
+    slug: "/ventures/velocivia",
+    status: "Coming Soon",
+    tagline:
+      "Performance, delivered. High-performance automotive marketplace & orchestration.",
+    problem:
+      "A future-focused marketplace for complex, multi-stage automotive builds — aligning speed, precision, and execution through the right technology at the right time.",
   },
   {
     name: "Digital Humanity Index (DHI)",
@@ -47,7 +65,7 @@ const ventures = [
     status: "Concept",
     tagline: "Digital authenticity & reputation framework for creators.",
     problem:
-      "Social media has become our résumé, reputation, and record — yet there's no standard for trust or authenticity. DHI reimagines digital credibility for the age of human data, exploring the evolution of a new kind of score — not for finances, but for humanity itself.",
+      "Social media has become our résumé, reputation, and record — yet there's no standard for trust or authenticity. DHI reimagines digital credibility for the age of human data.",
   },
 ];
 
@@ -98,11 +116,15 @@ export default function Ventures() {
                 className={`px-3 py-1 text-xs rounded-full ${
                   v.status === "Active"
                     ? "bg-green-500/20 text-green-400"
-                    : v.status === "Coming Dec 2025"
+                    : v.status === "Beta"
+                    ? "bg-emerald-500/20 text-emerald-400"
+                    : v.status === "Jan 2025"
+                    ? "bg-blue-500/20 text-blue-400"
+                    : v.status === "Coming Soon"
                     ? "bg-yellow-500/20 text-yellow-400"
                     : v.status === "Concept"
                     ? "bg-purple-500/20 text-purple-400"
-                    : "bg-yellow-500/20 text-yellow-400"
+                    : "bg-gray-500/20 text-gray-400"
                 }`}
               >
                 {v.status}
