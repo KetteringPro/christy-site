@@ -50,23 +50,7 @@ const ventures = [
     problem:
       "Unify bookings, rooms, and reporting in one app — Oravella streamlines your tech so you can focus on clients.",
   },
-  {
-    name: "Velocivia",
-    slug: "/ventures/velocivia",
-    status: "Coming Soon",
-    tagline:
-      "Performance, delivered. High-performance automotive marketplace & orchestration.",
-    problem:
-      "A future-focused marketplace for complex, multi-stage automotive builds — aligning speed, precision, and execution through the right technology at the right time.",
-  },
-  {
-    name: "Digital Humanity Index (DHI)",
-    slug: "/ventures/dhi",
-    status: "Concept",
-    tagline: "Digital authenticity & reputation framework for creators.",
-    problem:
-      "Social media has become our résumé, reputation, and record — yet there's no standard for trust or authenticity. DHI reimagines digital credibility for the age of human data.",
-  },
+
 ];
 
 // Anchor - The Show About It All
