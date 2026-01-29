@@ -52,7 +52,7 @@ export default function BestLife4UPage() {
           </ul>
         </section>
         <Link
-          href="https://bestlife4u.app"
+          href="https://beta.bestlife4u.app"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-8 inline-block bg-[#10b981] text-[#0B1120] px-6 py-3 rounded-lg font-semibold hover:bg-[#059669] transition"
