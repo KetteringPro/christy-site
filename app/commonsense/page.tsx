@@ -6,7 +6,9 @@ export default function CommonSensePage() {
 
   function showDrill(id: string) {
     setActiveDrill(id);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    setTimeout(() => {
+      document.getElementById("drill-content")?.scrollIntoView({ behavior: "smooth" });
+    }, 50);
   }
 
   function hideDrill() {
@@ -157,11 +159,17 @@ export default function CommonSensePage() {
                 <h3>VII. Food Safety &amp; Public Health</h3>
                 <p>Europe banned hundreds of additives we eat daily. The CDC lost trust for a reason. Vaccines don&rsquo;t cause autism. Better detection ≠ epidemic.</p>
               </div>
+              <div className="card" onClick={() => showDrill("partnership")}>
+                <span className="card-icon">📋</span>
+                <span className="card-arrow">→</span>
+                <h3>VIII. Partnership Reform</h3>
+                <p>Abolish legal marriage. Replace it with the Legal Partnership Contract — one federal standard, every structure recognized, no one protected by less than a zip code. Two adults, no contract? Roommates. Full stop.</p>
+              </div>
               <div className="card" onClick={() => showDrill("parenting")}>
                 <span className="card-icon">👨‍👩‍👦</span>
                 <span className="card-arrow">→</span>
-                <h3>VIII. Parenting</h3>
-                <p>Love your kids no matter what. But the job is to launch functioning adults — not protect them from the world forever. Love with clear boundaries.</p>
+                <h3>IX. Parenting</h3>
+                <p>Children have a fundamental right to both parents. Two names on a birth certificate triggers equal legal standing — automatic, simultaneous, non-negotiable. Default custody is shared. The burden of proof is on limiting access, not maintaining it.</p>
               </div>
             </div>
           </section>
@@ -169,7 +177,7 @@ export default function CommonSensePage() {
 
         {/* DRILL: ECONOMICS */}
         {activeDrill === "economics" && (
-          <section className="drill">
+          <section className="drill" id="drill-content">
             <button className="drill-back" onClick={hideDrill}>← Back to all topics</button>
             <h2>I. Economic Policy</h2>
             <p>Before we talk about any economic policy, we need to recalibrate what income actually means in modern America. We still use &ldquo;six figures&rdquo; as a measure of success. It&rsquo;s not. $100,000 in 1980 is equivalent to approximately $380,000 today. A family earning $100K in 2026 is paying rent or mortgage, groceries, car payments, insurance, maybe childcare — and there&rsquo;s nothing left. Six figures isn&rsquo;t rich. It&rsquo;s getting by.</p>
@@ -203,7 +211,7 @@ export default function CommonSensePage() {
 
         {/* DRILL: HEALTHCARE */}
         {activeDrill === "healthcare" && (
-          <section className="drill">
+          <section className="drill" id="drill-content">
             <button className="drill-back" onClick={hideDrill}>← Back to all topics</button>
             <h2>II. Healthcare</h2>
             <p>Let&rsquo;s address the elephant in the room first: universal healthcare is not the answer. Government-run healthcare doesn&rsquo;t fix the problem — it just shifts who&rsquo;s paying the inflated bill from you to the taxpayer, which is also you. A $30 Tylenol in a hospital doesn&rsquo;t cost less because the government is writing the check. And if you go universal, you&rsquo;re inflating the tax burden on every working American to fund a system that STILL hasn&rsquo;t fixed why everything costs so much.</p>
@@ -239,7 +247,7 @@ export default function CommonSensePage() {
 
         {/* DRILL: SOCIAL ISSUES */}
         {activeDrill === "social" && (
-          <section className="drill">
+          <section className="drill" id="drill-content">
             <button className="drill-back" onClick={hideDrill}>← Back to all topics</button>
             <h2>III. Social Issues</h2>
 
@@ -274,7 +282,7 @@ export default function CommonSensePage() {
 
         {/* DRILL: GOVERNMENT */}
         {activeDrill === "government" && (
-          <section className="drill">
+          <section className="drill" id="drill-content">
             <button className="drill-back" onClick={hideDrill}>← Back to all topics</button>
             <h2>IV. Government Structure</h2>
 
@@ -309,7 +317,7 @@ export default function CommonSensePage() {
 
         {/* DRILL: EDUCATION */}
         {activeDrill === "education" && (
-          <section className="drill">
+          <section className="drill" id="drill-content">
             <button className="drill-back" onClick={hideDrill}>← Back to all topics</button>
             <h2>V. Education, Energy &amp; Other</h2>
 
@@ -350,7 +358,7 @@ export default function CommonSensePage() {
 
         {/* DRILL: CULTURE */}
         {activeDrill === "culture" && (
-          <section className="drill">
+          <section className="drill" id="drill-content">
             <button className="drill-back" onClick={hideDrill}>← Back to all topics</button>
             <h2>VI. Religion, Culture &amp; Public Life</h2>
 
@@ -374,7 +382,7 @@ export default function CommonSensePage() {
 
         {/* DRILL: FOOD SAFETY */}
         {activeDrill === "food" && (
-          <section className="drill">
+          <section className="drill" id="drill-content">
             <button className="drill-back" onClick={hideDrill}>← Back to all topics</button>
             <h2>VII. Food Safety, Agriculture &amp; Public Health</h2>
 
@@ -402,15 +410,140 @@ export default function CommonSensePage() {
 
         {/* DRILL: PARENTING */}
         {activeDrill === "parenting" && (
-          <section className="drill">
+          <section className="drill" id="drill-content">
             <button className="drill-back" onClick={hideDrill}>← Back to all topics</button>
-            <h2>VIII. Bonus Plank: Parenting</h2>
+            <h2>IX. Parenting</h2>
 
             <h3>Love Your Kids — With Clear Boundaries</h3>
             <p>Love your kids no matter what. If they&rsquo;re gay, if they&rsquo;re trans, if they choose a different path than you planned — they&rsquo;re still your kid. That&rsquo;s unconditional love for WHO THEY ARE.</p>
             <p>But love doesn&rsquo;t mean no structure. The goal of parenting is to launch fully functioning adults into society. Set expectations. Build accountability. Give them skills, direction, and purpose.</p>
             <p>We need to reframe the conversation: the job isn&rsquo;t to protect your kids from the world forever. It&rsquo;s to prepare them to thrive in it.</p>
             <p>And for adult children: you can love them AND say no. You can support them AND stop subsidizing them. Love with clear boundaries isn&rsquo;t less love. It&rsquo;s better love.</p>
+
+            <h3>Children Have a Fundamental Right to Both Parents</h3>
+            <p>The current system treats parental access as a privilege awarded by a court after a fight. It isn&rsquo;t. It is a default right — for the child AND for both parents — that requires documented cause to modify. Equal, simultaneous, automatic. That is the starting point. Not something either parent has to win.</p>
+            <div className="position"><strong>Position:</strong> Default custody is shared. Equally. From the moment two parents are legally established. Modification requires documented cause — not better attorneys, not strategic filing location, not who got to the courthouse first. The burden of proof is on limiting access, not on maintaining it.</div>
+            <p>This reframes the entire custody conversation. Current language awards custody to someone. The LPC framework starts from shared and modifies only when the child&rsquo;s welfare requires it. That single reframe eliminates the adversarial filing race, jurisdiction shopping, strategic relocation before filing, and the financial incentive to maximize custody percentage for support calculation purposes.</p>
+            <div className="position"><strong>Support calculated on income and child needs — not custody percentage.</strong> When custody is equal by default, the financial incentive to fight over parenting time disappears. Support reflects what the child actually requires, proportional to what each parent actually earns. Not a leverage instrument. Not a negotiating chip.</div>
+
+            <h3>The Birth Certificate Is a De Facto Contract — Give It Terms</h3>
+            <p>When two parents are named on a birth certificate, they have created a co-parenting relationship with financial and legal implications. Right now that relationship has no accompanying framework unless the parents were already married. The BC is doing legal work with no legal structure behind it.</p>
+            <div className="position"><strong>Two names on a birth certificate triggers an automatic default parental Legal Partnership Contract.</strong> Equal legal standing. Equal financial responsibility. Equal parental rights. You cannot carry the obligation without the rights. You cannot claim the rights without the obligation. Parenthood is both, simultaneously, from the moment that document is filed.</div>
+            <p>This is the clearest expression of the dependency principle: the child did not choose this arrangement. They cannot advocate for themselves. The state&rsquo;s only legitimate interest in private relationships is protecting dependents who can&rsquo;t protect themselves — and a child with two named parents deserves the legal framework that makes both of those parents real.</p>
+
+            <h3>BC Naming — Consent or Established Fact. Nothing Else.</h3>
+            <p>You cannot be named as a legal parent on a federal document without your verified consent or court-established paternity. Full stop. Currently some states require a signed Acknowledgment of Paternity before a father&rsquo;s name appears. Others let a parent write in whoever they choose — leaving the named party to hire an attorney and prove a negative to be removed. That is backwards. It ends under federal standardization.</p>
+            <div className="position"><strong>Two paths to BC naming:</strong> Voluntary consent — both parties sign the Acknowledgment of Paternity at filing. Or court-established paternity via a simple, defined administrative process. No other mechanism. One federal standard. Every state.</div>
+
+            <h3>The Paternity Process — Simple, Fast, Controlled</h3>
+            <p>For cases where paternity is disputed or unknown, the process must be accessible without being a weapon.</p>
+            <div className="position"><strong>Just cause required to trigger a court-ordered test:</strong> documented relationship or contact during the conception window, specific credible basis for the claim, filed under the filer&rsquo;s own verified identity. No anonymous filings. A magistrate reviews within 30 days — not a full court proceeding, not attorneys required. A straightforward administrative review with a defined timeline and a defined answer.</div>
+            <p>One negative result is the answer. That individual cannot be named in a subsequent filing without new material evidence. The process is not a tool for cycling through a list of names until someone accepts responsibility.</p>
+            <div className="position"><strong>Cost accountability:</strong> Filing without just cause and receiving a negative result means the filing party bears the full cost. The process exists to establish parenthood — not to harass, leverage, or create legal pressure. File against ten men without cause, nine come back negative — you are receiving nine bills.</div>
+            <div className="position"><strong>Refusal of a court-ordered test = default judgment of paternity.</strong> You had the opportunity to establish the truth. You declined. The court draws the only reasonable conclusion. The BC is filed accordingly.</div>
+
+            <h3>False Naming — Accountability in Both Directions</h3>
+            <p>A parent who deliberately names a false father — omitting the biological parent or substituting a preferred name — is filing a fraudulent federal document. The child, once of age, or any party with credible documented cause, can trigger the correction process. The fraudulent filing party bears all associated costs.</p>
+            <p>Protecting individuals from being falsely named and protecting children from having their biological parentage concealed are not competing interests. They are the same interest in accurate legal records — served by the same accountability standard applied equally in both directions.</p>
+
+            <h3>No More Windows — Unauthorized Removal Is a Federal Violation</h3>
+            <p>Right now there is a gap between &ldquo;we just had a baby&rdquo; and &ldquo;a custody order exists.&rdquo; In that gap, one parent can take a child across state lines and the other parent hears &ldquo;it&rsquo;s a civil matter&rdquo; when they call for help. That gap closes the moment the BC is filed.</p>
+            <div className="position"><strong>When both parents have equal legal standing from BC filing, there is no window.</strong> Unauthorized removal of a child from a legal parent&rsquo;s access is not a custody dispute waiting to be resolved. It is a violation of an established federal parental contract — enforceable immediately, across every state line, because the LPC is a federal instrument. Interstate enforcement is federal by definition.</div>
+
+            <h3>Relocation — Plan First. Move Second.</h3>
+            <p>Relocation is not prohibited. Life moves. People move. What is prohibited is leaving without a plan. The other parent&rsquo;s legal rights do not pause while you figure out the logistics. Most people don&rsquo;t relocate maliciously — they do it because the current system has never given them a clear process. This is that process.</p>
+            <div className="position"><strong>Step 1 — Notice.</strong> Mandatory advance notice to the other legal parent. Minimum 90 days wherever possible. Not a courtesy — a legal requirement. Emergency situations have an expedited process but notice still happens. Same day the need to relocate is established.</div>
+            <div className="position"><strong>Step 2 — Negotiated Relocation Agreement.</strong> Before anyone moves: where is the child&rsquo;s primary residence, what does the non-relocating parent&rsquo;s access look like, who bears travel costs, what does virtual contact look like in the interim, what happens if the relocating parent moves again. All of it enumerated. All of it agreed.</div>
+            <div className="position"><strong>Step 3 — Filed and Approved.</strong> The agreement is filed with the federal LPC system. Magistrate review — not a full court proceeding. Confirmed against the child&rsquo;s best interest standard. Approved. Everyone moves forward with clarity and legal standing.</div>
+            <p>If the other parent won&rsquo;t negotiate in good faith, there is a court process with a defined timeline. The relocating parent is not held hostage indefinitely. But negotiation comes first.</p>
+            <p>Military transfer orders are federal. A legal parental contract is federal. One does not supersede the other. Orders move the service member. They do not move someone else&rsquo;s parental rights. The relocation framework runs concurrently with PCS preparation — the lead time that comes with most orders is the notice period.</p>
+            <p>A third party who knowingly assists in a relocation that has not followed this process is not a bystander. They are a participant in the violation of an established federal parental contract. Liability attaches from the moment they had knowledge of the existing LPC and assisted anyway.</p>
+
+            <h3>The Age-Based Parenting Framework</h3>
+            <p>A parenting plan that works for a newborn is the wrong plan for a five-year-old. The wrong plan for a five-year-old is the wrong plan for a twelve-year-old. The framework grows with the child — because that&rsquo;s what the child actually needs. Mutual discretion governs the specifics within each stage. The floor is access for both parents. Everything above that is negotiable and expected to evolve.</p>
+
+            <div className="position"><strong>Birth — 2 years:</strong> Access is non-negotiable for both parents. Structure reflects developmental reality — a breastfeeding infant has different needs than a toddler. Overnight frequency, duration, and scheduling are negotiable within a defined minimum floor. Neither parent can use infancy as a permanent exclusion tool. The agreement is written to evolve as the child develops — reducing future court involvement by building in the transitions upfront.</div>
+
+            <div className="position"><strong>3 — 11 years:</strong> Full shared framework. Overnights, holidays, school year splits, summers — all enumerated. Travel protocols defined. Virtual contact minimums established for periods when physical access isn&rsquo;t possible. Both parents present and consulted for major medical and educational decisions.</div>
+
+            <div className="position"><strong>12 — 14 years — The Influence Window Opens:</strong> The child begins to have a documented voice in their own arrangement. Not a veto. A voice. A structured conversation with a single neutral child advocate — not a courtroom, not choosing between parents in a traumatic setting — whose job is to represent the child&rsquo;s stated interests independently. That input is formally considered in any modification proceeding.</div>
+
+            <div className="position"><strong>14 — 16 years — Stronger Weight:</strong> The child&rsquo;s preference carries increased legal weight. The neutral advocate distinguishes between preference and welfare — a teenager who wants to live with the more permissive parent because of a later curfew is exercising different judgment than one documenting a genuinely unsafe environment. Both are heard. Both are evaluated on their actual merits.</div>
+
+            <div className="position"><strong>16 — 17 years — Presumptive Weight:</strong> The documented preference of a 16-year-old carries presumptive weight in any modification proceeding. A teenager who has lived this arrangement for years has information a judge doesn&rsquo;t. The framework listens to them. Welfare override remains available — presumptive is not absolute.</div>
+
+            <h3>Parental Alienation — Documented Breach</h3>
+            <p>Using your parenting time to systematically undermine the child&rsquo;s relationship with the other parent — coaching, badmouthing, manufacturing fear or negative association — is a breach of the parental LPC. Documented alienation shifts the custody arrangement against the alienating parent. The child&rsquo;s voice matters. Manufacturing that voice is fraud against the child and against the other parent simultaneously.</p>
+            <p>The single neutral advocate model exists specifically to surface this. One advocate. Not one per side. A child who reports entirely different preferences to different interviewers is a child being coached. The process is designed to catch it.</p>
+
+            <div className="warn-box">⚠ CARVE-OUTS REQUIRED: Sexual assault survivors must not be compelled into a parental LPC with their attacker. Documented assault — established through criminal OR civil standard — exempts the survivor from automatic contract initiation with that individual. Sperm donor agreements and third-party reproduction arrangements require clear declaration instruments that precede BC filing and establish non-parental status by mutual agreement. These frameworks require dedicated legal development before implementation.</div>
+
+            <p style={{marginTop:"24px",color:"var(--txt3)",fontStyle:"italic",fontSize:".9rem"}}>→ See Card VIII: Partnership Reform for the complete Legal Partnership Contract framework that underlies this section.</p>
+          </section>
+        )}
+
+        {/* DRILL: PARTNERSHIP REFORM */}
+        {activeDrill === "partnership" && (
+          <section className="drill" id="drill-content">
+            <button className="drill-back" onClick={hideDrill}>← Back to all topics</button>
+            <h2>VIII. Partnership Reform — Abolish Legal Marriage</h2>
+            <p>Marriage is a legal contract. We&rsquo;ve spent two centuries pretending it&rsquo;s primarily a romantic or religious one. It&rsquo;s not. It&rsquo;s a binding legal agreement with financial, parental, civil, and tax implications — and we currently treat it with less rigor than a car lease and more baggage than any single institution deserves to carry.</p>
+            <p>The word &ldquo;marriage&rdquo; carries 2,000 years of religious weight, gender role assumptions, cultural expectation, and legal precedent written for a completely different world. We are not reforming marriage. We are replacing the legal instrument entirely — with something that actually works.</p>
+
+            <div className="position"><strong>Position:</strong> Legal marriage as a government category is abolished. Common law marriage is abolished. Domestic partnerships are abolished. They are all replaced by a single federal instrument: the <strong>Legal Partnership Contract (LPC)</strong>. One standard. Federally recognized. Administered by states. Every relationship structure eligible. No exceptions based on number of parties, gender, or configuration.</div>
+
+            <h3>The Ceremony Is Yours. The Contract Is the Law.</h3>
+            <p>Want a church wedding? Beautiful. Get married in your place of worship, by your tradition, with your community. That is between you, your partner, and whatever you believe in. It has zero legal weight — and that&rsquo;s not a demotion. That&rsquo;s the separation of church and state actually functioning as intended.</p>
+            <p>The government&rsquo;s job is the contract. Your community&rsquo;s job is the ceremony. They have been co-signing each other&rsquo;s work for 200 years and it has served neither institution well. This ends that arrangement cleanly — and actually <em>protects</em> religious institutions from government interference in their sacraments.</p>
+
+            <h3>The Ketubah Model — 2,000 Years Ahead of Us</h3>
+            <p>Jewish marriage law has had a version of this figured out since antiquity. The Ketubah is a prenuptial contract that enumerates the obligations of each party — financial responsibilities, how partners are to be treated, what happens in dissolution. Explicit terms. Agreed upfront. Signed before witnesses.</p>
+            <p>That is not unromantic. That is what respect actually looks like. You are declaring, in writing, exactly what you are committing to. The LPC operates on the same principle: a base legal framework with default federal terms, fully amendable by mutual agreement before signing.</p>
+
+            <h3>Who Can File an LPC</h3>
+            <p>Any configuration of consenting adults. Two people. Three. More. The personal choices of adults about who they build a life with are not the government&rsquo;s business. What IS the government&rsquo;s business is ensuring that every person in that arrangement has legal protection — and right now, for anyone outside a two-person opposite-sex marriage, that protection is inconsistent at best and nonexistent at worst.</p>
+            <div className="position"><strong>Adding a party requires a full contract renegotiation.</strong> New terms. Every current party signs. Roles, financial responsibilities, and parental obligations defined for all parties including the new one. No one can unilaterally restructure a family unit that other people have built their lives around.</div>
+            <p>Sister Wives illustrated exactly what happens without this framework. When one partner legally restructured the family to benefit a newly added member — divorcing his original legal spouse to secure adoption rights for the newest — the women who had contributed financially and raised children for decades had no legal recourse. The religious structure that bound them morally had no legal teeth. The legal structure refused to recognize them at all. They fell through the gap between church and state, protected by neither. That is not a polygamy argument. That is a contract failure argument.</p>
+
+            <h3>No Contract — No Legal Standing</h3>
+            <p>Two adults cohabitating without an LPC are legally roommates. The government has no opinion on their personal arrangement. What consenting adults do in their private lives is not the state&rsquo;s business.</p>
+            <p>This eliminates common law marriage entirely — and that&rsquo;s a feature, not a loss. Common law marriage was a patch for a broken system: courts trying to determine whether two people were &ldquo;really&rdquo; married based on how long they lived together, whether they introduced each other as spouses at parties, whether other people thought they seemed married. That is not law. That is speculation with legal consequences. The absence of a contract IS the answer. Adults made a choice. The state respects it.</p>
+            <p>The line changes the moment a dependent enters the picture.</p>
+            <div className="position"><strong>No LPC + child exists:</strong> The state imposes a minimum parental framework automatically. The child did not choose this arrangement. They cannot advocate for themselves. Default terms covering custody, financial responsibility, and medical decision rights are assigned and negotiable from there — but there IS a framework whether the parties wanted one or not. You do not get to opt out of responsibility for a dependent human by declining to file paperwork.</div>
+
+            <h3>The LPC Is In Force Until Dissolved or Death</h3>
+            <p>No automatic expiration. A missed renewal date should not accidentally dissolve someone&rsquo;s parental rights or insurance coverage. The contract remains in force until one of three things happens: mutual dissolution, breach dissolution, or death — same as any serious legal agreement.</p>
+            <p>Optional renewal checkpoints can be built into the contract itself by the parties who want them. Not an expiration — a voluntary check-in. Both parties actively reaffirm or renegotiate. That is a completely different psychological and legal instrument than an expiration date, and it serves the people who want intentionality without the risk of accidental dissolution.</p>
+
+            <h3>Two-Track Dissolution</h3>
+            <p>The current no-fault model treats every dissolution identically regardless of what happened. The spouse who honored every term of the agreement and the one who abandoned, cheated, or abused are processed through the same system with roughly equivalent outcomes. That is not justice. That is not logic.</p>
+            <div className="position"><strong>Track 1 — Mutual Dissolution:</strong> Both parties agree the contract has run its course. Clean split per the pre-agreed terms. Equitable distribution as defined upfront. No blame, no penalty beyond the contract&rsquo;s own dissolution terms.</div>
+            <div className="position"><strong>Track 2 — Breach Dissolution:</strong> One party violated enumerated contract terms. The breaching party bears consequences — financial, custody-weighting, support obligations — as defined in the agreement. Breach is documented, dated, and sequenced. You broke the contract. The dissolution reflects that.</div>
+            <p>Sequencing matters and the current system ignores it entirely. A party who breaches first — refusing to fulfill a material obligation — cannot then file claims against the consequences of their own breach and have those claims treated as equivalent to the original grievance. Timeline is evidence. When claims first appear in dissolution proceedings, after breach has already been established, they carry a different evidentiary burden than claims with years of documented history behind them.</p>
+            <p>Consider an active duty service member who receives transfer orders — a material condition of military life that any spouse of a service member understands before the commitment is made. The relocating spouse fulfills their obligations and moves. The non-relocating spouse refuses, remains in the marital home, and continues receiving the financial benefits of the partnership while the service member carries the cost of two households. Under the current system: years of spousal support, extended timelines to refinance the marital asset, no mechanism to recognize who actually breached. Under breach dissolution: the refusal to relocate is documented non-compliance with a material contract term. Expedited dissolution track. Support obligations recalibrated to reflect who honored the agreement.</p>
+
+            <h3>Breach Dissolution — Expedited Track</h3>
+            <p>When breach is documented and confirmed, the non-breaching party should not be forced through the same multi-year process as a mutual dissolution. That extended timeline is itself a tool the breaching party can weaponize — draining assets, accumulating costs, delaying resolution while continuing to receive partnership benefits.</p>
+            <div className="position"><strong>Breach confirmed:</strong> Expedited dissolution timeline. Hard deadlines on asset refinancing and division — defined, court-enforced, non-negotiable. Support obligations flow toward the party who honored the agreement, not the one who didn&rsquo;t. Non-compliance is not a negotiating strategy. It is evidence.</div>
+            <p>A documented abuse survivor with a court-issued restraining order — a document that represents a judicial determination that abuse occurred — should not be ordered to subsidize their abuser&rsquo;s legal fees. That outcome is not a malfunction of the current system. It is the system operating as designed, without a breach framework to distinguish between parties. The LPC changes that calculus entirely.</p>
+
+            <h3>On Emotional Abuse — Evidentiary Standards Matter</h3>
+            <p>Emotional abuse is real. It causes documented, lasting harm. It also happens to be the most difficult category of abuse to verify and the easiest to manufacture in a contested dissolution. The answer is not to dismiss it. The answer is to require the same evidentiary rigor applied to any serious legal claim: timeline, documented pattern, corroboration.</p>
+            <p>A claim that surfaces for the first time in dissolution paperwork — after breach has already been established by the opposing party — is not equivalent to a claim with years of therapy records, communications, and witness corroboration behind it. Courts must evaluate when claims emerge and in what context. Retaliatory filings are a documented pattern in family court. Protecting real survivors requires distinguishing them from strategic ones — and the current system has no mechanism to do that.</p>
+            <div className="warn-box">⚠ CRITICAL BALANCE: Any retaliatory claim framework must be constructed with extreme care. The same evidentiary standards that protect against manufactured allegations cannot become a barrier that silences legitimate abuse survivors. Mandatory legal representation for abuse claimants regardless of financial means, and independent evidentiary review, are essential components of getting this right.</div>
+
+            <h3>Existing Marriages — Automatic Conversion</h3>
+            <p>Every legally recognized marriage, domestic partnership, and civil union existing at implementation automatically converts to an LPC. Original filing date preserved. Seniority preserved. Social Security calculations, inheritance timelines, and legal standing all carry forward intact. No ceremony required. No re-filing required. Parties receive notification and have a defined window — 24 months — to elect amended terms under the new framework or remain on converted default terms.</p>
+            <div className="position"><strong>Federal management, state administration.</strong> The LPC is a federal legal standard — one set of rules, recognized in every state, no ambiguity when people move across state lines. A legal partnership formed in Vermont is a legal partnership in Mississippi. States administer the filing infrastructure, the record-keeping, the processing. The law is uniform. The patchwork of 50 different marriage codes, domestic partnership statutes, and common law recognition standards is retired.</div>
+
+            <h3>Insurance &amp; Benefits</h3>
+            <p>Corporate benefits currently recognize domestic partnerships inconsistently because there is no federal standard defining what one is. HR departments are making individual judgment calls. Under the LPC: a filed, witnessed, legal contract is the credential. It exists or it doesn&rsquo;t. Coverage eligibility is binary and employer policy becomes simple: LPC on file, eligible. No contract, not eligible. No case-by-case determinations. No gaming the system by adding uncounted parties — you cannot add someone to a family benefits plan without them being a named signatory on the filed contract.</p>
+            <div className="warn-box">⚠ NEEDS LEGAL ARCHITECTURE: Multi-party tax filing status, Social Security survivor benefits across 3+ party contracts, inheritance law for non-binary family structures, and custody frameworks in multi-parent dissolutions all require significant legal development. The positions are clear. The implementation infrastructure is complex and requires the right legal minds at the table.</div>
+
+            <h3>The Birth Certificate Bridge — Where Partnership Law Meets Parental Rights</h3>
+            <p>The LPC framework and children&rsquo;s right to access both parents are not separate issues. They are the same issue viewed from two angles. The LPC establishes that two names on a birth certificate creates equal, simultaneous, automatic legal parenthood for both parties. Children&rsquo;s right to access both parents establishes that equal legal parenthood means equal default access — for the child and for each parent.</p>
+            <div className="position"><strong>These two principles meet at the same point:</strong> Equal standing is the default. Limiting it requires cause. Not paperwork. Not geography. Not who filed first. A child&rsquo;s right to both parents and a parent&rsquo;s right to their child are not competing interests — they are the same right, recognized simultaneously, from the moment two names appear on that birth certificate.</div>
+            <p style={{marginTop:"24px",color:"var(--txt3)",fontStyle:"italic",fontSize:".9rem"}}>→ See Card IX: Parenting for the complete birth certificate, paternity process, and default custody framework.</p>
           </section>
         )}
 
