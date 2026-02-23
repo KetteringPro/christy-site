@@ -172,6 +172,8 @@ export default function CommonSensePage() {
                 <p>Children have a fundamental right to both parents. Two names on a birth certificate triggers equal legal standing — automatic, simultaneous, non-negotiable. Default custody is shared. The burden of proof is on limiting access, not maintaining it.</p>
               </div>
             </div>
+
+            <button className="drill-back" onClick={hideDrill} style={{marginTop:"40px"}}>← Back to all topics</button>
           </section>
         )}
 
@@ -206,6 +208,8 @@ export default function CommonSensePage() {
 
             <h3>5. Social Security — Protect It. Period.</h3>
             <p>Non-negotiable. People paid into this system their entire working lives. That is THEIR money. The government made a commitment and it needs to honor it.</p>
+
+            <button className="drill-back" onClick={hideDrill} style={{marginTop:"40px"}}>← Back to all topics</button>
           </section>
         )}
 
@@ -242,6 +246,8 @@ export default function CommonSensePage() {
               <li>Prioritize it as a national health priority</li>
             </ul>
             <p>You can&rsquo;t fix the country&rsquo;s politics if you don&rsquo;t fix the country&rsquo;s mental health first.</p>
+
+            <button className="drill-back" onClick={hideDrill} style={{marginTop:"40px"}}>← Back to all topics</button>
           </section>
         )}
 
@@ -277,6 +283,8 @@ export default function CommonSensePage() {
             <h3>5. Gun Rights — Protect Ownership</h3>
             <p>Gun control doesn&rsquo;t stop criminals. Law-abiding citizens shouldn&rsquo;t be punished for what criminals do.</p>
             <div className="warn-box">⚠ CONTROVERSIAL PLANK: Many will disagree. Need to compile studies on armed communities vs. gun-free zones and crime rates.</div>
+
+            <button className="drill-back" onClick={hideDrill} style={{marginTop:"40px"}}>← Back to all topics</button>
           </section>
         )}
 
@@ -312,6 +320,8 @@ export default function CommonSensePage() {
               <li>Family court, custody, and divorce proceedings are wildly inconsistent</li>
               <li>Better training and accountability for law enforcement</li>
             </ul>
+
+            <button className="drill-back" onClick={hideDrill} style={{marginTop:"40px"}}>← Back to all topics</button>
           </section>
         )}
 
@@ -353,6 +363,8 @@ export default function CommonSensePage() {
             <p>If childcare costs more than a second income, you&rsquo;ve effectively told one parent they can&rsquo;t work. That&rsquo;s a labor force issue.</p>
             <p>Germany pays Kindergeld — €259 per child per month to ALL families. Finland gives every expectant parent a baby box with essentials.</p>
             <div className="position"><strong>Position:</strong> This isn&rsquo;t &ldquo;free stuff.&rdquo; It&rsquo;s infrastructure investment in human capital. That&rsquo;s not socialism. That&rsquo;s business logic.</div>
+
+            <button className="drill-back" onClick={hideDrill} style={{marginTop:"40px"}}>← Back to all topics</button>
           </section>
         )}
 
@@ -377,6 +389,8 @@ export default function CommonSensePage() {
             <p>And the Land O&rsquo;Lakes situation is particularly telling — they removed the Native American woman but kept the land. They literally removed the Native person and kept the land.</p>
             <p>Meanwhile, Little Debbie is still smiling on every snack cake box. Colonel Sanders still sells fried chicken. The Wendy&rsquo;s girl is still on every restaurant sign. All white faces. Nobody demanded they be removed.</p>
             <div className="position"><strong>Position:</strong> Stop erasing cultural representation in the name of protecting the cultures you&rsquo;re erasing. If an image is genuinely offensive and the community says so — have the conversation. But don&rsquo;t panic-scrub because a hashtag trended.</div>
+
+            <button className="drill-back" onClick={hideDrill} style={{marginTop:"40px"}}>← Back to all topics</button>
           </section>
         )}
 
@@ -405,6 +419,8 @@ export default function CommonSensePage() {
             <p><strong>ADHD:</strong> Diagnoses doubled in 20 years. Medication market exploded. Some is better identification. Some is a system with a pill for every problem.</p>
             <p><strong>Vaccines and autism:</strong> Vaccines do NOT cause autism. The original study was retracted for fraud. The author lost his medical license. The timing coincides because developmental differences become noticeable at the same age vaccinations happen. Correlation is not causation.</p>
             <div className="position"><strong>Position:</strong> Trust science, not conspiracy theories. Reject anti-vaxxer mythology. But maintain healthy skepticism of a system that profits from diagnosis and treatment. Better detection explains rising numbers. Fund research into WHY conditions exist.</div>
+
+            <button className="drill-back" onClick={hideDrill} style={{marginTop:"40px"}}>← Back to all topics</button>
           </section>
         )}
 
@@ -479,6 +495,8 @@ export default function CommonSensePage() {
             <div className="warn-box">⚠ CARVE-OUTS REQUIRED: Sexual assault survivors must not be compelled into a parental LPC with their attacker. Documented assault — established through criminal OR civil standard — exempts the survivor from automatic contract initiation with that individual. Sperm donor agreements and third-party reproduction arrangements require clear declaration instruments that precede BC filing and establish non-parental status by mutual agreement. These frameworks require dedicated legal development before implementation.</div>
 
             <p style={{marginTop:"24px",color:"var(--txt3)",fontStyle:"italic",fontSize:".9rem"}}>→ See Card VIII: Partnership Reform for the complete Legal Partnership Contract framework that underlies this section.</p>
+
+            <button className="drill-back" onClick={hideDrill} style={{marginTop:"40px"}}>← Back to all topics</button>
           </section>
         )}
 
@@ -544,6 +562,8 @@ export default function CommonSensePage() {
             <p>The LPC framework and children&rsquo;s right to access both parents are not separate issues. They are the same issue viewed from two angles. The LPC establishes that two names on a birth certificate creates equal, simultaneous, automatic legal parenthood for both parties. Children&rsquo;s right to access both parents establishes that equal legal parenthood means equal default access — for the child and for each parent.</p>
             <div className="position"><strong>These two principles meet at the same point:</strong> Equal standing is the default. Limiting it requires cause. Not paperwork. Not geography. Not who filed first. A child&rsquo;s right to both parents and a parent&rsquo;s right to their child are not competing interests — they are the same right, recognized simultaneously, from the moment two names appear on that birth certificate.</div>
             <p style={{marginTop:"24px",color:"var(--txt3)",fontStyle:"italic",fontSize:".9rem"}}>→ See Card IX: Parenting for the complete birth certificate, paternity process, and default custody framework.</p>
+
+            <button className="drill-back" onClick={hideDrill} style={{marginTop:"40px"}}>← Back to all topics</button>
           </section>
         )}
 
