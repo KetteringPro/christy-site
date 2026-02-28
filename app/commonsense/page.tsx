@@ -102,6 +102,15 @@ export default function CommonSensePage() {
             <strong>Data over emotion.</strong> · <strong>Metrics over feelings.</strong> · <strong>Critical thinking over tribalism.</strong>
           </p>
           <div className="scroll-hint">↓ Scroll to explore</div>
+          <a href="/commonsense/donate" style={{
+            color:"var(--pink)",
+            fontSize:".85rem",
+            letterSpacing:"2px",
+            textTransform:"uppercase",
+            textDecoration:"none",
+            marginTop:"20px",
+            display:"inline-block"
+          }}>Show the Receipts →</a>
         </section>
 
         {/* ORIGIN STORY */}
@@ -724,6 +733,18 @@ export default function CommonSensePage() {
             <div className="principle">Pay attention.</div>
             <div className="principle last">Don&rsquo;t be a fucking idiot.</div>
           </div>
+          <a href="/commonsense/donate" style={{
+            display:"inline-block",
+            marginTop:"32px",
+            padding:"14px 32px",
+            borderRadius:"50px",
+            background:"var(--grd)",
+            color:"#fff",
+            fontFamily:"'DM Sans',sans-serif",
+            fontWeight:600,
+            fontSize:".95rem",
+            textDecoration:"none"
+          }}>Support the Platform — Show the Receipts</a>
           <hr />
           <p className="footnote warn-note">⚠ = Gaps acknowledged. Positions held but more research needed.</p>
           <p className="footnote" style={{ marginTop: "12px" }}>This is a living document. Built at 2am on a Tuesday because someone bothered to Google the lyrics.</p>
