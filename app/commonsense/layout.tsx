@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "./commonsense.css";
 
 export const metadata: Metadata = {
   title: "The Common Sense Party — We Actually Looked Into It.",

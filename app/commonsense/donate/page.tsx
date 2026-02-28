@@ -1,5 +1,4 @@
 "use client";
-import { useState, useEffect } from "react";
 
 // ── SAMPLE DATA — replace with real data source / API ──
 const DONATIONS = [
@@ -31,88 +30,24 @@ export default function DonatePage() {
 
   return (
     <>
-      <style jsx global>{`
-        :root{--bg:#0d0d1a;--bg2:#111125;--card:#161630;--card-h:#1c1c3d;--bdr:rgba(200,120,220,.12);--bdr-h:rgba(233,30,99,.35);--pink:#E91E63;--pink-lt:#F48FB1;--purp:#9C27B0;--purp-lt:#CE93D8;--mag:#C2185B;--txt:#EEEEF2;--txt2:#9999B0;--txt3:#666680;--warn:#FF9800;--warn-bg:rgba(255,152,0,.08);--green:#4CAF50;--green-bg:rgba(76,175,80,.08);--red:#ef5350;--red-bg:rgba(239,83,80,.08);--grd:linear-gradient(135deg,#E91E63,#9C27B0);--shadow:0 4px 30px rgba(0,0,0,.3);--glow:0 0 40px rgba(233,30,99,.06)}
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
-        .donate-page{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);line-height:1.75;min-height:100vh}
-        .donate-page *{box-sizing:border-box}
-
-        .donate-hero{text-align:center;padding:80px 24px 40px;position:relative;max-width:900px;margin:0 auto}
-        .donate-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 40%,rgba(233,30,99,.06) 0%,transparent 55%),radial-gradient(ellipse at 70% 60%,rgba(156,39,176,.05) 0%,transparent 55%);pointer-events:none}
-        .donate-tag{font-family:'DM Sans',sans-serif;font-size:.85rem;letter-spacing:3px;text-transform:uppercase;background:var(--grd);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:20px;font-weight:600}
-        .donate-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.15;margin-bottom:24px;background:linear-gradient(135deg,#F48FB1,#CE93D8,#F48FB1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-        .donate-quote{font-size:1rem;color:var(--txt2);max-width:700px;margin:0 auto 32px;font-style:italic;line-height:1.8}
-        .donate-quote strong{color:var(--pink-lt);font-style:normal}
-        .donate-cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
-        .donate-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:50px;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:600;cursor:pointer;transition:all .3s ease;border:none;text-decoration:none}
-        .donate-btn.primary{background:var(--grd);color:#fff}
-        .donate-btn.primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(233,30,99,.3)}
-        .donate-btn.secondary{background:transparent;color:var(--pink-lt);border:1px solid var(--bdr-h)}
-        .donate-btn.secondary:hover{background:rgba(233,30,99,.08);transform:translateY(-2px)}
-        .donate-fine{font-size:.8rem;color:var(--txt3);margin-top:8px}
-
-        .scoreboard{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;max-width:900px;margin:40px auto;padding:0 24px}
-        .score-card{background:var(--card);border:1px solid var(--bdr);border-radius:16px;padding:24px;text-align:center}
-        .score-label{font-size:.8rem;letter-spacing:2px;text-transform:uppercase;color:var(--txt3);margin-bottom:8px}
-        .score-value{font-family:'JetBrains Mono',monospace;font-size:1.8rem;font-weight:600}
-        .score-value.green{color:var(--green)}
-        .score-value.red{color:var(--red)}
-        .score-value.balance{color:var(--warn)}
-
-        .ledger-section{max-width:1200px;margin:40px auto;padding:0 24px 80px}
-        .ledger-header{text-align:center;margin-bottom:40px}
-        .ledger-header h2{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--txt2);margin-bottom:8px}
-        .ledger-header p{color:var(--txt3);font-size:.9rem}
-        .ledger-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
-        .ledger-col h3{font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:20px;padding-bottom:12px;display:flex;align-items:center;gap:10px}
-        .ledger-col.inbound h3{color:var(--green);border-bottom:2px solid var(--green)}
-        .ledger-col.outbound h3{color:var(--red);border-bottom:2px solid var(--red)}
-        .ledger-entry{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:16px 20px;margin-bottom:12px;transition:all .2s ease}
-        .ledger-entry:hover{border-color:var(--bdr-h);background:var(--card-h)}
-        .ledger-row{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
-        .ledger-date{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--txt3);min-width:50px}
-        .ledger-detail{flex:1}
-        .ledger-name{font-weight:600;color:var(--txt);font-size:.9rem}
-        .ledger-location{color:var(--txt3);font-size:.8rem}
-        .ledger-desc{color:var(--txt2);font-size:.82rem;margin-top:4px;line-height:1.5}
-        .ledger-cat{display:inline-block;font-size:.7rem;letter-spacing:1px;text-transform:uppercase;color:var(--pink);background:rgba(233,30,99,.08);padding:2px 8px;border-radius:4px;margin-top:6px}
-        .ledger-amount{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:.95rem;white-space:nowrap}
-        .ledger-amount.in{color:var(--green)}
-        .ledger-amount.out{color:var(--red)}
-
-        .empty-state{background:var(--card);border:1px dashed var(--bdr);border-radius:12px;padding:40px 24px;text-align:center;color:var(--txt3);font-style:italic}
-        .empty-state span{display:block;font-size:2rem;margin-bottom:12px}
-
-        .principles-bar{max-width:900px;margin:0 auto;padding:40px 24px;text-align:center}
-        .principles-bar blockquote{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--txt2);font-style:italic;border-left:3px solid var(--pink);padding-left:20px;text-align:left;max-width:700px;margin:0 auto 24px}
-        .principles-bar .attrib{color:var(--txt3);font-size:.85rem;text-align:right;max-width:700px;margin:0 auto}
-
-        .contrast{max-width:900px;margin:0 auto;padding:40px 24px 80px}
-        .contrast h2{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--pink-lt);text-align:center;margin-bottom:32px}
-        .contrast-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-        .contrast-card{background:var(--card);border:1px solid var(--bdr);border-radius:16px;padding:24px;position:relative;overflow:hidden}
-        .contrast-card.them{opacity:.6}
-        .contrast-card.them::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 10px,rgba(239,83,80,.03) 10px,rgba(239,83,80,.03) 20px);pointer-events:none}
-        .contrast-card h3{font-family:'Playfair Display',serif;font-size:1rem;margin-bottom:12px}
-        .contrast-card.us h3{color:var(--green)}
-        .contrast-card.them h3{color:var(--red)}
-        .contrast-card p{font-size:.85rem;color:var(--txt2);margin-bottom:8px}
-        .contrast-card p:last-child{margin-bottom:0}
-
-        .closing-donate{text-align:center;padding:60px 24px 80px;max-width:700px;margin:0 auto}
-        .closing-donate p{color:var(--txt2);font-size:.95rem;margin-bottom:16px}
-        .closing-donate .punchline{color:var(--txt);font-weight:700;font-size:1.2rem;font-family:'Playfair Display',serif}
-        .closing-donate .footnote{font-size:.82rem;color:var(--txt3);font-style:italic;margin-top:32px}
-
-        @media(max-width:768px){
-          .scoreboard{grid-template-columns:1fr}
-          .ledger-grid{grid-template-columns:1fr}
-          .contrast-grid{grid-template-columns:1fr}
-          .score-value{font-size:1.4rem}
-        }
-      `}</style>
-
       <div className="donate-page">
+
+        <a href="/commonsense" style={{
+          display:"inline-flex",
+          alignItems:"center",
+          gap:"8px",
+          color:"var(--pink)",
+          fontSize:".9rem",
+          cursor:"pointer",
+          padding:"24px 24px 0",
+          maxWidth:"900px",
+          margin:"0 auto",
+          fontFamily:"'DM Sans',sans-serif",
+          letterSpacing:"1px",
+          textTransform:"uppercase",
+          fontWeight:600,
+          textDecoration:"none"
+        }}>← Back to Platform</a>
 
         {/* HERO */}
         <section className="donate-hero">
