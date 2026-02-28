@@ -45,7 +45,11 @@ export default function CommonSensePage() {
 
         .grid-section{max-width:1100px;margin:0 auto;padding:20px 24px 80px}
         .grid-section h2{font-family:'Playfair Display',serif;font-size:1.6rem;text-align:center;margin-bottom:40px;color:var(--txt2)}
-        .card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+        .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+        .cat-header{grid-column:1/-1;display:flex;align-items:center;gap:12px;margin-top:28px;margin-bottom:4px;padding-bottom:8px;border-bottom:1px solid var(--bdr)}
+        .cat-header:first-child{margin-top:0}
+        .cat-header span.cat-icon{font-size:1.3rem}
+        .cat-header h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--pink-lt);letter-spacing:1px;font-weight:600;margin:0}
         .card{background:var(--card);border:1px solid var(--bdr);border-radius:16px;padding:28px 24px;cursor:pointer;transition:all .3s ease;position:relative;overflow:hidden}
         .card:hover{background:var(--card-h);border-color:var(--bdr-h);transform:translateY(-3px);box-shadow:var(--glow)}
         .card-icon{font-size:2rem;margin-bottom:12px;display:block}
@@ -81,7 +85,7 @@ export default function CommonSensePage() {
         .author p{color:var(--txt2);font-size:.93rem;margin-bottom:14px;text-align:left}
         .sign-off{font-style:italic;color:var(--txt3);margin-top:24px;text-align:center!important}
 
-        @media(max-width:640px){
+        @media(max-width:900px){
           .card-grid{grid-template-columns:1fr}
           .hero h1{font-size:2rem}
           .drill h2{font-size:1.5rem}
@@ -117,6 +121,9 @@ export default function CommonSensePage() {
           <section className="grid-section" id="cards">
             <h2>Explore the Platform</h2>
             <div className="card-grid">
+
+              {/* CATEGORY: MONEY & SYSTEMS */}
+              <div className="cat-header"><span className="cat-icon">💰</span><h3>Money &amp; Systems</h3></div>
               <div className="card" onClick={() => showDrill("economics")}>
                 <span className="card-icon">💰</span>
                 <span className="card-arrow">→</span>
@@ -129,35 +136,41 @@ export default function CommonSensePage() {
                 <h3>II. Healthcare</h3>
                 <p>Universal healthcare isn&rsquo;t the answer — it just shifts who pays the inflated bill. Fix the cost. Expose the insurance pricing shell game. Cap pharma.</p>
               </div>
-              <div className="card" onClick={() => showDrill("social")}>
-                <span className="card-icon">⚖️</span>
+              <div className="card" onClick={() => showDrill("accountability")}>
+                <span className="card-icon">🔍</span>
                 <span className="card-arrow">→</span>
-                <h3>III. Social Issues</h3>
-                <p>Equal, not special. Legal abortion with limits. Legalize &amp; tax drugs and sex work. Borders exist for a reason. Protect gun ownership.</p>
+                <h3>III. Congressional Accountability</h3>
+                <p>They enter Congress middle class and leave multimillionaires. On $174K a year. Ban stock trading. Independent oversight. Show the receipts or face the consequences.</p>
               </div>
+
+              {/* CATEGORY: POWER & GOVERNANCE */}
+              <div className="cat-header"><span className="cat-icon">🏛️</span><h3>Power &amp; Governance</h3></div>
               <div className="card" onClick={() => showDrill("government")}>
                 <span className="card-icon">🏛️</span>
                 <span className="card-arrow">→</span>
                 <h3>IV. Government Structure</h3>
                 <p>Term limits for everyone. Modernize everything. Stop running 18th century software on a 21st century world. Show the receipts.</p>
               </div>
-              <div className="card" onClick={() => showDrill("education")}>
-                <span className="card-icon">🎓</span>
+              <div className="card" onClick={() => showDrill("foreign")}>
+                <span className="card-icon">🌐</span>
                 <span className="card-arrow">→</span>
-                <h3>V. Education, Energy &amp; Other</h3>
-                <p>Student debt is predatory lending with a graduation ceremony. Elevate trades. Military as career path. Homelessness is three problems, not one.</p>
+                <h3>V. Foreign Policy</h3>
+                <p>We are not the world&rsquo;s police force. Stop bankrolling conflicts with no return. Strategic alliances, not blank checks. America&rsquo;s interests first — actually.</p>
               </div>
-              <div className="card" onClick={() => showDrill("culture")}>
-                <span className="card-icon">🌍</span>
+              <div className="card" onClick={() => showDrill("media")}>
+                <span className="card-icon">📡</span>
                 <span className="card-arrow">→</span>
-                <h3>VI. Religion, Culture &amp; Public Life</h3>
-                <p>Don&rsquo;t subtract Christmas — ADD Diwali, Eid, and Kwanzaa. They removed the Native woman but kept the land. Little Debbie is still smiling.</p>
+                <h3>VI. Media &amp; Information Integrity</h3>
+                <p>The right sells fear. The left sells guilt. Neither sells facts. Corporate media is entertainment, not journalism. Algorithms reward outrage. Nobody is paying attention.</p>
               </div>
-              <div className="card" onClick={() => showDrill("food")}>
-                <span className="card-icon">🍔</span>
+
+              {/* CATEGORY: RIGHTS & FREEDOMS */}
+              <div className="cat-header"><span className="cat-icon">⚖️</span><h3>Rights &amp; Freedoms</h3></div>
+              <div className="card" onClick={() => showDrill("social")}>
+                <span className="card-icon">⚖️</span>
                 <span className="card-arrow">→</span>
-                <h3>VII. Food Safety &amp; Public Health</h3>
-                <p>Europe banned hundreds of additives we eat daily. The CDC lost trust for a reason. Vaccines don&rsquo;t cause autism. Better detection ≠ epidemic.</p>
+                <h3>VII. Social Issues</h3>
+                <p>Equal, not special. Legal abortion with limits. Legalize &amp; tax drugs and sex work. Borders exist for a reason. Protect gun ownership.</p>
               </div>
               <div className="card" onClick={() => showDrill("partnership")}>
                 <span className="card-icon">📋</span>
@@ -165,10 +178,31 @@ export default function CommonSensePage() {
                 <h3>VIII. Partnership Reform</h3>
                 <p>Abolish legal marriage. Replace it with the Legal Partnership Contract — one federal standard, every structure recognized, no one protected by less than a zip code. Two adults, no contract? Roommates. Full stop.</p>
               </div>
+              <div className="card" onClick={() => showDrill("culture")}>
+                <span className="card-icon">🌍</span>
+                <span className="card-arrow">→</span>
+                <h3>IX. Religion, Culture &amp; Public Life</h3>
+                <p>Don&rsquo;t subtract Christmas — ADD Diwali, Eid, and Kwanzaa. They removed the Native woman but kept the land. Little Debbie is still smiling.</p>
+              </div>
+
+              {/* CATEGORY: PEOPLE & DAILY LIFE */}
+              <div className="cat-header"><span className="cat-icon">🏠</span><h3>People &amp; Daily Life</h3></div>
+              <div className="card" onClick={() => showDrill("education")}>
+                <span className="card-icon">🎓</span>
+                <span className="card-arrow">→</span>
+                <h3>X. Education, Energy &amp; Other</h3>
+                <p>Student debt is predatory lending with a graduation ceremony. Elevate trades. Military as career path. Homelessness is three problems, not one.</p>
+              </div>
+              <div className="card" onClick={() => showDrill("food")}>
+                <span className="card-icon">🍔</span>
+                <span className="card-arrow">→</span>
+                <h3>XI. Food Safety &amp; Public Health</h3>
+                <p>Europe banned hundreds of additives we eat daily. The CDC lost trust for a reason. Vaccines don&rsquo;t cause autism. Better detection ≠ epidemic.</p>
+              </div>
               <div className="card" onClick={() => showDrill("parenting")}>
                 <span className="card-icon">👨‍👩‍👦</span>
                 <span className="card-arrow">→</span>
-                <h3>IX. Parenting</h3>
+                <h3>XII. Parenting</h3>
                 <p>Children have a fundamental right to both parents. Two names on a birth certificate triggers equal legal standing — automatic, simultaneous, non-negotiable. Default custody is shared. The burden of proof is on limiting access, not maintaining it.</p>
               </div>
             </div>
@@ -255,7 +289,7 @@ export default function CommonSensePage() {
         {activeDrill === "social" && (
           <section className="drill" id="drill-content">
             <button className="drill-back" onClick={hideDrill}>← Back to all topics</button>
-            <h2>III. Social Issues</h2>
+            <h2>VII. Social Issues</h2>
 
             <h3>1. LGBTQ+ Rights — Equal, Not Special</h3>
             <p>Same rights, same access, same opportunities as everyone else. Full stop.</p>
@@ -310,8 +344,9 @@ export default function CommonSensePage() {
               <li><strong>State level:</strong> Issues where local context genuinely matters</li>
             </ul>
 
-            <h3>4. Military Spending — America First (Actually)</h3>
-            <p>Military spending should directly benefit U.S. security and interests. We are not the world&rsquo;s police force. Stop bankrolling conflicts with no clear strategic benefit. Bring that money home.</p>
+            <h3>4. Military Spending &amp; Foreign Policy</h3>
+            <p>Military spending, foreign aid, and America&rsquo;s role on the world stage are covered in their own dedicated section.</p>
+            <p style={{color:"var(--txt3)",fontStyle:"italic",fontSize:".9rem"}}>→ See Card V: Foreign Policy for the complete framework on military engagement, alliances, and bringing the money home.</p>
 
             <h3>5. Police &amp; Criminal Justice Reform</h3>
             <p>Federal baseline STANDARDS without federal CONTROL. Set the floor. Let states build above it.</p>
@@ -329,7 +364,7 @@ export default function CommonSensePage() {
         {activeDrill === "education" && (
           <section className="drill" id="drill-content">
             <button className="drill-back" onClick={hideDrill}>← Back to all topics</button>
-            <h2>V. Education, Energy &amp; Other</h2>
+            <h2>X. Education, Energy &amp; Other</h2>
 
             <h3>1. Education — Modernize Everything</h3>
             <p>We&rsquo;re teaching kids in 2026 the same way we taught them in 1975. Kids have AI in their pockets and we&rsquo;re running curricula designed for the industrial era.</p>
@@ -372,7 +407,7 @@ export default function CommonSensePage() {
         {activeDrill === "culture" && (
           <section className="drill" id="drill-content">
             <button className="drill-back" onClick={hideDrill}>← Back to all topics</button>
-            <h2>VI. Religion, Culture &amp; Public Life</h2>
+            <h2>IX. Religion, Culture &amp; Public Life</h2>
 
             <h3>1. Religion in Government — Keep It Out</h3>
             <p>Separation of church and state exists for a reason. You don&rsquo;t get to impose your faith on 330 million people through law.</p>
@@ -398,7 +433,7 @@ export default function CommonSensePage() {
         {activeDrill === "food" && (
           <section className="drill" id="drill-content">
             <button className="drill-back" onClick={hideDrill}>← Back to all topics</button>
-            <h2>VII. Food Safety, Agriculture &amp; Public Health</h2>
+            <h2>XI. Food Safety, Agriculture &amp; Public Health</h2>
 
             <h3>1. Food Safety — Follow Europe&rsquo;s Lead</h3>
             <p>The United States allows hundreds of food additives banned in Europe, Canada, and other developed nations. Titanium dioxide, brominated vegetable oil, potassium bromate, artificial dyes, growth hormones.</p>
@@ -424,11 +459,121 @@ export default function CommonSensePage() {
           </section>
         )}
 
+        {/* DRILL: CONGRESSIONAL ACCOUNTABILITY */}
+        {activeDrill === "accountability" && (
+          <section className="drill" id="drill-content">
+            <button className="drill-back" onClick={hideDrill}>← Back to all topics</button>
+            <h2>III. Congressional Accountability</h2>
+            <p>This is not a government structure problem. This is a corruption problem. The structure of government is outdated — that&rsquo;s Section IV. This section is about the people inside that structure actively exploiting it for personal gain while the public they serve gets poorer, sicker, and angrier.</p>
+            <p>Members of Congress earn $174,000 per year. That salary hasn&rsquo;t changed in over a decade. And yet, roughly half of Congress are millionaires. Some are worth tens of millions. A few are worth hundreds of millions. On a government salary. The math doesn&rsquo;t work — unless the system is designed to let them profit from their positions. Which it is.</p>
+
+            <h3>1. Stock Trading — Ban It. All of It.</h3>
+            <p>Members of Congress sit in classified briefings, shape legislation that moves markets, and then trade stocks in the industries they regulate. Nancy Pelosi&rsquo;s husband&rsquo;s trades have consistently outperformed top hedge fund managers — so reliably that people built apps to copy her portfolio. Senators dumped stocks before COVID crashed the market. Republicans and Democrats alike have been caught timing trades around legislation they had direct influence over.</p>
+            <p>The STOCK Act of 2012 was supposed to fix this. It didn&rsquo;t. Penalties are laughable — a $200 fine for late disclosure. Two hundred dollars. For what would be a federal crime if anyone outside Congress did it.</p>
+            <div className="position"><strong>Position:</strong> Complete ban on individual stock trading for all members of Congress, their spouses, and dependent children while in office. Blind trusts or index funds only. Violations result in forfeiture of gains, substantial fines, and referral for criminal prosecution. Not a $200 slap on the wrist. Real consequences.</div>
+
+            <h3>2. Financial Transparency — Real Disclosure, Not Theater</h3>
+            <p>Current financial disclosure rules let members report assets in absurdly wide brackets — &ldquo;$5 million to $25 million&rdquo; is a single reporting range. That&rsquo;s not transparency. That&rsquo;s a system designed to obscure rather than reveal. The public has no idea what their representatives actually own, earn, or owe.</p>
+            <div className="position"><strong>Position:</strong> Exact-dollar reporting for all assets, income, debts, and transactions. Published publicly in a searchable, machine-readable database. Updated quarterly, not annually. If you work for the public, the public gets to see the books.</div>
+
+            <h3>3. Independent Oversight — Stop Letting Congress Investigate Itself</h3>
+            <p>The House Ethics Committee is Congress policing Congress. It&rsquo;s the fox guarding the henhouse. During the 118th Congress, the Ethics Committee initiated 41 investigative matters and impaneled just three subcommittees. Cases drag on for months or years and rarely result in meaningful consequences. Both parties protect their own — Nancy Mace&rsquo;s subpoena motion for Ilhan Omar&rsquo;s immigration records was blocked by Republicans AND Democrats. Washington protects Washington.</p>
+            <div className="position"><strong>Position:</strong> Create a fully independent Congressional Financial Oversight Board — appointed outside of Congress, with subpoena power, investigative authority, and the ability to refer cases directly for criminal prosecution. No political appointees. No Congressional veto over investigations. External, independent, with teeth.</div>
+
+            <h3>4. The Revolving Door — Slam It Shut</h3>
+            <p>Members leave Congress and immediately become lobbyists for the industries they regulated. Regulators leave agencies and join the companies they were overseeing. It&rsquo;s not a revolving door — it&rsquo;s a career pipeline from public service to private enrichment, and the &ldquo;service&rdquo; part is just the audition.</p>
+            <div className="position"><strong>Position:</strong> 10-year ban on lobbying after leaving Congress or any senior federal appointment. Not one year. Not five. Ten. Long enough that your relationships and insider knowledge have expired. You came to serve — act like it.</div>
+
+            <h3>5. Wealth Audits — Entry and Exit</h3>
+            <p>If you enter Congress worth $500,000 and leave worth $50 million, that gap needs to be explained — publicly and under oath. Every dollar. Every asset. Every &ldquo;investment opportunity&rdquo; that magically appeared while you were in office.</p>
+            <div className="position"><strong>Position:</strong> Mandatory, independent financial audits at the start and end of every term. Net worth at entry, net worth at exit, and a full accounting of how the gap was bridged. Anomalies trigger automatic investigation. Not optional. Not self-reported. Audited.</div>
+
+            <h3>6. Campaign Finance — Follow the Money</h3>
+            <p>The current campaign finance system is legalized bribery. PACs, Super PACs, dark money — the infrastructure exists to funnel unlimited money from corporations and special interests to the politicians who write the laws those entities benefit from. Citizens United didn&rsquo;t create corruption. It legalized it at scale.</p>
+            <div className="position"><strong>Position:</strong> Full transparency on all political donations. Every dollar traceable to its source. Corporate PAC contributions to individual candidates banned. If you&rsquo;re buying influence, the public gets to know who&rsquo;s writing the check.</div>
+            <div className="warn-box">⚠ NEEDS LEGAL ARCHITECTURE: Campaign finance reform requires navigating Citizens United and First Amendment precedent. The positions are clear. The constitutional pathway requires serious legal work.</div>
+
+            <p style={{marginTop:"32px",color:"var(--txt)",fontWeight:600,fontSize:"1.05rem",textAlign:"center"}}>The system isn&rsquo;t broken. It&rsquo;s working exactly as designed — for the people inside it. The rest of us are just paying the bill.</p>
+
+            <button className="drill-back" onClick={hideDrill} style={{marginTop:"40px"}}>← Back to all topics</button>
+          </section>
+        )}
+
+        {/* DRILL: FOREIGN POLICY */}
+        {activeDrill === "foreign" && (
+          <section className="drill" id="drill-content">
+            <button className="drill-back" onClick={hideDrill}>← Back to all topics</button>
+            <h2>V. Foreign Policy</h2>
+            <p>America has spent decades acting as the world&rsquo;s police force, bankrolling conflicts, propping up allies, and spreading itself across every continent — often with no clear strategic return. Meanwhile, infrastructure crumbles at home, veterans sleep on the street, and the national debt climbs past $36 trillion. At some point, &ldquo;America First&rdquo; has to mean something beyond a slogan.</p>
+
+            <h3>1. Military Engagement — Strategic, Not Reflexive</h3>
+            <p>Every military deployment should answer three questions: What is the direct threat to U.S. security? What is the exit strategy? What is the measurable outcome? If you can&rsquo;t answer all three clearly, we don&rsquo;t go.</p>
+            <p>Twenty years in Afghanistan. Trillions spent. And the Taliban retook the country in eleven days. That&rsquo;s not national defense. That&rsquo;s a money pit with no accountability.</p>
+            <div className="position"><strong>Position:</strong> Military force is a last resort with defined objectives, timelines, and exit conditions. No open-ended engagements. No nation-building projects without measurable benchmarks. Congress must vote on military action — actually use the War Powers Act the way it was designed.</div>
+
+            <h3>2. Foreign Aid — Investment, Not Charity</h3>
+            <p>The U.S. sends billions in foreign aid annually. Some of it serves genuine strategic interests. Some of it disappears into corrupt governments with zero accountability for how it&rsquo;s spent. Taxpayers have no visibility into the ROI.</p>
+            <div className="position"><strong>Position:</strong> Every dollar of foreign aid tied to measurable outcomes and transparent reporting. Aid to countries with documented human rights abuses or systemic corruption requires independent oversight and accountability mechanisms. If the money isn&rsquo;t producing results, redirect it.</div>
+
+            <h3>3. Alliances — Reciprocal, Not One-Sided</h3>
+            <p>NATO allies have consistently underspent on their own defense while relying on the U.S. to pick up the tab. Strategic alliances matter — but they need to be genuinely mutual. You don&rsquo;t get to free-ride on American military spending while running trade surpluses against us.</p>
+            <div className="position"><strong>Position:</strong> Honor existing alliances but demand reciprocity. Defense commitments must be met by all parties. Alliances are partnerships, not sponsorships.</div>
+
+            <h3>4. Trade — Fair and Reciprocal</h3>
+            <p>If another country taxes American goods at 25%, we tax theirs at 25%. Level playing field. Trade policy should protect American industries and workers without starting trade wars that hurt consumers.</p>
+            <div className="warn-box">⚠ NEEDS MORE RESEARCH: Specific tariff impacts, supply chain dependencies, and sector-by-sector analysis needed. The principle is reciprocity. The implementation requires expertise.</div>
+
+            <h3>5. Bring the Money Home</h3>
+            <p>Every dollar spent overseas is a dollar not spent on roads, schools, healthcare, or veterans at home. The national debt is a security threat in itself. Fiscal discipline starts with not writing blank checks to the rest of the world.</p>
+            <div className="position"><strong>Position:</strong> Reallocate a meaningful percentage of foreign military spending to domestic infrastructure, veteran services, and debt reduction. Protect strategic interests abroad. Invest in the country we&rsquo;re supposedly defending.</div>
+
+            <button className="drill-back" onClick={hideDrill} style={{marginTop:"40px"}}>← Back to all topics</button>
+          </section>
+        )}
+
+        {/* DRILL: MEDIA */}
+        {activeDrill === "media" && (
+          <section className="drill" id="drill-content">
+            <button className="drill-back" onClick={hideDrill}>← Back to all topics</button>
+            <h2>VI. Media &amp; Information Integrity</h2>
+            <p>This platform exists because of a halftime show. 128 million people watched Bad Bunny perform in Spanish at the Super Bowl. The right was outraged because a man sang in Spanish. The left celebrated it as a cultural victory. Neither side bothered to Google the lyrics. The opening song is about collecting women as objects. Blatant misogyny — and nobody caught it because nobody was paying attention.</p>
+            <p>That&rsquo;s not an accident. That&rsquo;s the product of a media ecosystem designed to make people feel instead of think.</p>
+
+            <h3>1. Corporate Media — Entertainment, Not Journalism</h3>
+            <p>A handful of corporations own almost everything Americans read, watch, and hear. Six companies control over 90% of U.S. media. They are not in the business of informing the public. They are in the business of selling advertising. And advertising revenue is driven by engagement. And engagement is driven by outrage, fear, and conflict.</p>
+            <p>Fox News tells you what to be angry about. MSNBC tells you what to be offended by. CNN chases whatever gets the most clicks today. None of them are consistently telling you what&rsquo;s actually happening with the context you need to understand it.</p>
+            <div className="position"><strong>Position:</strong> Recognize corporate media for what it is — a business. Consume it accordingly. The answer isn&rsquo;t government-controlled media — that&rsquo;s worse. The answer is media literacy, source diversification, and a population that demands facts over narratives.</div>
+
+            <h3>2. Local Journalism — The Real Loss</h3>
+            <p>While everyone argues about cable news, the real crisis is happening at the local level. Local newspapers and investigative reporters have been gutted. Since 2005, the U.S. has lost more than a third of its newspapers. These were the people investigating your city council, your school board, your local police department — the accountability layer that actually affected your daily life.</p>
+            <p>Without local journalism, corruption at the local level goes unchecked. And national media doesn&rsquo;t fill the gap — they&rsquo;re covering the president&rsquo;s tweets, not your town&rsquo;s budget fraud.</p>
+            <div className="position"><strong>Position:</strong> Explore funding models that sustain local investigative journalism without government editorial control. Tax incentives for local news organizations. Treat local journalism as civic infrastructure — because that&rsquo;s what it is.</div>
+            <div className="warn-box">⚠ NEEDS DEVELOPMENT: Funding models that maintain editorial independence while providing sustainable revenue need further research. The line between support and influence is critical.</div>
+
+            <h3>3. Social Media Algorithms — Engineered Division</h3>
+            <p>Social media platforms don&rsquo;t show you what&rsquo;s true. They show you what keeps you scrolling. And what keeps you scrolling is content that makes you angry, afraid, or outraged. The algorithm doesn&rsquo;t care about accuracy — it optimizes for engagement. The most extreme, divisive, emotionally manipulative content gets amplified because it works.</p>
+            <p>The result: people live in information bubbles where their existing beliefs are reinforced, opposing views are caricatured, and nuance is algorithmically suppressed because it doesn&rsquo;t generate clicks.</p>
+            <div className="position"><strong>Position:</strong> Algorithmic transparency. Platforms should be required to disclose how content is ranked, promoted, and suppressed. Users should have the option to see chronological feeds without algorithmic curation. You should know when you&rsquo;re being manipulated.</div>
+
+            <h3>4. Misinformation vs. Censorship — The Line</h3>
+            <p>Government-mandated &ldquo;truth&rdquo; is more dangerous than misinformation. The cure cannot be worse than the disease. But that doesn&rsquo;t mean there&rsquo;s no problem. Foreign state actors run disinformation campaigns designed to destabilize American democracy. Domestic grifters spread conspiracy theories for profit. AI-generated content is making it harder to distinguish real from fake.</p>
+            <div className="position"><strong>Position:</strong> The answer is not censorship. The answer is education, critical thinking, and media literacy — starting in schools and continuing into adulthood. Teach people HOW to evaluate sources, identify manipulation, and think for themselves. A population that can think critically is immune to propaganda. A population that can&rsquo;t is vulnerable to all of it.</div>
+
+            <h3>5. The 75% Rule — Check Your Own Side</h3>
+            <p>Here&rsquo;s the Common Sense Party standard for media consumption: If you agree with everything your preferred news source tells you, you&rsquo;re not informed — you&rsquo;re being managed. Seek out sources that challenge your assumptions. Read the article, not just the headline. Google the lyrics.</p>
+            <div className="position"><strong>Position:</strong> If you spend 100% of your media time in sources that confirm what you already believe, you are part of the problem. Diversify your information diet. Challenge your own assumptions. That&rsquo;s not weakness. That&rsquo;s intellectual honesty.</div>
+
+            <p style={{marginTop:"32px",color:"var(--txt)",fontWeight:600,fontSize:"1.05rem",textAlign:"center"}}>Nobody is paying attention. That&rsquo;s how we got here. Start paying attention. That&rsquo;s how we get out.</p>
+
+            <button className="drill-back" onClick={hideDrill} style={{marginTop:"40px"}}>← Back to all topics</button>
+          </section>
+        )}
+
         {/* DRILL: PARENTING */}
         {activeDrill === "parenting" && (
           <section className="drill" id="drill-content">
             <button className="drill-back" onClick={hideDrill}>← Back to all topics</button>
-            <h2>IX. Parenting</h2>
+            <h2>XII. Parenting</h2>
 
             <h3>Love Your Kids — With Clear Boundaries</h3>
             <p>Love your kids no matter what. If they&rsquo;re gay, if they&rsquo;re trans, if they choose a different path than you planned — they&rsquo;re still your kid. That&rsquo;s unconditional love for WHO THEY ARE.</p>
@@ -561,7 +706,7 @@ export default function CommonSensePage() {
             <h3>The Birth Certificate Bridge — Where Partnership Law Meets Parental Rights</h3>
             <p>The LPC framework and children&rsquo;s right to access both parents are not separate issues. They are the same issue viewed from two angles. The LPC establishes that two names on a birth certificate creates equal, simultaneous, automatic legal parenthood for both parties. Children&rsquo;s right to access both parents establishes that equal legal parenthood means equal default access — for the child and for each parent.</p>
             <div className="position"><strong>These two principles meet at the same point:</strong> Equal standing is the default. Limiting it requires cause. Not paperwork. Not geography. Not who filed first. A child&rsquo;s right to both parents and a parent&rsquo;s right to their child are not competing interests — they are the same right, recognized simultaneously, from the moment two names appear on that birth certificate.</div>
-            <p style={{marginTop:"24px",color:"var(--txt3)",fontStyle:"italic",fontSize:".9rem"}}>→ See Card IX: Parenting for the complete birth certificate, paternity process, and default custody framework.</p>
+            <p style={{marginTop:"24px",color:"var(--txt3)",fontStyle:"italic",fontSize:".9rem"}}>→ See Card XII: Parenting for the complete birth certificate, paternity process, and default custody framework.</p>
 
             <button className="drill-back" onClick={hideDrill} style={{marginTop:"40px"}}>← Back to all topics</button>
           </section>
