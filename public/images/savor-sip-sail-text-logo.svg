@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1600" height="320" viewBox="0 0 1600 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Savor.Sip.Sail text logo</title>
+  <desc id="desc">Text-based SVG logo for Savor.Sip.Sail using Ocean Blue text and Coral dots on a transparent background.</desc>
+  <style>
+    .wordmark {
+      font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+      font-size: 124px;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    .blue { fill: #006994; }
+    .coral { fill: #FF6B6B; }
+  </style>
+
+  <!-- Transparent background -->
+  <rect width="1600" height="320" fill="transparent"/>
+
+  <text x="800" y="200" text-anchor="middle" dominant-baseline="middle" class="wordmark">
+    <tspan class="blue">Savor</tspan><tspan class="coral">.</tspan><tspan dx="10" class="blue">Sip</tspan><tspan class="coral">.</tspan><tspan dx="10" class="blue">Sail</tspan>
+  </text>
+</svg>

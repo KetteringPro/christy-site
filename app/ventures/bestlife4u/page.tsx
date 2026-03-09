@@ -3,70 +3,115 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata = {
-  title: "BestLife4U | Life Transitions Made Easier",
+  title: "BestLife4U | AI-Guided Tools for Life's Most Important Decisions",
   description:
-    "A structured, AI-guided platform helping individuals navigate divorce, estate planning, and major life transitions with dignity and support.",
+    "Estate planning, divorce resolution, and major life transitions — structured, AI-guided, and built for dignity, clarity, and affordability.",
 };
 
 export default function BestLife4UPage() {
   return (
-    <main className="min-h-screen bg-[#0B1120] text-[#E2E8F0] flex flex-col items-center justify-center px-6 py-20">
-      <div className="max-w-3xl w-full text-center bg-[#111827] border border-slate-700 rounded-2xl p-10 shadow-lg">
-        <div className="w-36 h-36 mx-auto mb-6 flex items-center justify-center rounded-2xl overflow-hidden">
-          <Image
-            src="/images/bestlife4U-logo.png"
-            alt="BestLife4U logo"
-            width={144}
-            height={144}
-            className="object-contain"
-          />
+    <main className="min-h-screen bg-[#0B1120] text-[#E2E8F0] px-6 py-10">
+      <div className="max-w-5xl mx-auto">
+        {/* HERO */}
+        <div className="bg-[#111827] border border-slate-700 rounded-2xl p-10 shadow-lg">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* Left */}
+            <div className="flex flex-col justify-center space-y-4">
+              <div>
+                <h1 className="text-4xl font-semibold text-[#F1F5F9] mb-2">BestLife4U</h1>
+                <p className="text-[#CBD5E1] leading-relaxed mb-6">
+                  AI-guided tools for life&apos;s most important decisions — estate planning,
+                  divorce resolution, and major life transitions. Built for dignity, clarity,
+                  and affordability.
+                </p>
+                <section>
+                  <h2 className="text-xl font-semibold text-white mb-3">The Problem</h2>
+                  <p className="text-gray-300 leading-relaxed">
+                    Most people don&apos;t have a will. Most people can&apos;t afford an
+                    attorney for every life decision. And when major transitions hit —
+                    divorce, death, major change — the systems designed to help are
+                    expensive, adversarial, and built for lawyers, not people.{" "}
+                    <strong className="text-white">BestLife4U changes that.</strong>
+                  </p>
+                </section>
+              </div>
+              <div className="flex flex-wrap gap-3 pt-2">
+                <a
+                  href="https://bestlife4u.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-[#10b981] text-[#0B1120] px-6 py-3 rounded-lg font-semibold hover:bg-[#059669] transition"
+                >
+                  Visit BestLife4U →
+                </a>
+                <Link
+                  href="/"
+                  className="inline-block border border-[#a855f7] text-[#a855f7] px-5 py-3 rounded-lg text-sm font-semibold hover:bg-[#a855f7] hover:text-[#0B1120] transition"
+                >
+                  ← Back to Home
+                </Link>
+              </div>
+            </div>
+
+            {/* Right — logo display */}
+            <div className="hidden md:flex items-center justify-center">
+              <div className="relative">
+                <div className="absolute -inset-8 bg-gradient-to-br from-emerald-500/20 to-teal-500/10 blur-3xl rounded-full" />
+                <Image
+                  src="/images/bestlife4U-logo.png"
+                  alt="BestLife4U"
+                  width={280}
+                  height={280}
+                  className="relative object-contain drop-shadow-2xl"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-        <h1 className="text-3xl font-semibold text-[#F1F5F9] mb-4">
-          BestLife4U
-        </h1>
-        <p className="text-[#CBD5E1] mb-8 leading-relaxed">
-          When the future doesn't align with the original vision… we help make life transitions easier for you. A structured, AI-guided platform for divorce resolution, estate planning, and navigating life's most challenging moments — with dignity, transparency, and support.
-        </p>
-        <section className="max-w-3xl mx-auto py-8 px-4">
-          <h2 className="text-xl font-semibold text-white mb-4">The Problem</h2>
-          <p className="text-gray-300 leading-relaxed">
-            Life transitions are hard enough without the added stress of confusing processes, expensive attorneys, and adversarial systems. Whether it's divorce, estate planning, or other major changes —{" "}
-            <strong className="text-white">people deserve better tools</strong>.
-            BestLife4U provides structured guidance that prioritizes safety, transparency, and human dignity over conflict and confusion.
-          </p>
-        </section>
-        <section className="mt-6">
-          <h2 className="text-xl font-semibold text-[#F1F5F9] mb-3">Vision</h2>
+
+        {/* THE SOLUTION */}
+        <section className="bg-[#1E293B] border border-slate-700 rounded-2xl p-8 mt-8">
+          <h2 className="text-2xl font-semibold text-[#F1F5F9] mb-4">The Solution</h2>
           <p className="text-[#CBD5E1] leading-relaxed">
-            To create critical infrastructure for human dignity during life's hardest moments — providing accessible, AI-assisted tools that help people navigate transitions safely, affordably, and on their own terms.
+            A structured, AI-guided platform that walks one person through their most critical
+            life decisions — at their own pace, on their own terms. You enter your information
+            privately. The platform guides you through the process, surfaces what matters, and
+            produces clear, actionable output — no attorney required to get started.
           </p>
         </section>
-        <section className="mt-6 text-left">
-          <h2 className="text-xl font-semibold text-[#F1F5F9] mb-3 text-center">Key Features</h2>
-          <ul className="text-[#CBD5E1] leading-relaxed space-y-2 mt-4">
-            <li>• <strong className="text-white">Independent Disclosure</strong> — Each party enters information privately before comparison</li>
-            <li>• <strong className="text-white">Built-In Honesty Checks</strong> — Automatic discrepancy surfacing prevents hidden assets</li>
-            <li>• <strong className="text-white">Safety-First Design</strong> — Domestic violence screening and crisis detection protocols</li>
-            <li>• <strong className="text-white">AI-Guided Support</strong> — Emotional intelligence and procedural guidance throughout</li>
-            <li>• <strong className="text-white">Affordable Estate Planning</strong> — Medical POA, Basic Wills, and bundles at accessible prices</li>
-          </ul>
+
+        {/* WHAT WE'VE BUILT */}
+        <section className="bg-[#1E293B] border border-slate-700 rounded-2xl p-8 mt-8">
+          <h2 className="text-2xl font-semibold text-[#F1F5F9] mb-6">What We&apos;ve Built</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-lg font-semibold text-white mb-2">Estate Planning</h3>
+              <p className="text-[#CBD5E1] leading-relaxed">
+                Wills, Living Wills, Medical POA, Healthcare Directives, and bundles at
+                accessible prices. The tools most people know they need and never get around
+                to — finally within reach.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-white mb-2">Divorce Resolution</h3>
+              <p className="text-[#CBD5E1] leading-relaxed">
+                A structured guided process with built-in honesty checks, automatic
+                discrepancy surfacing to prevent hidden assets, and safety-first design
+                including domestic violence screening and crisis detection protocols. Each
+                party enters information privately before comparison — no adversarial dynamic
+                required.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-white mb-2">AI-Guided Support</h3>
+              <p className="text-[#CBD5E1] leading-relaxed">
+                Emotional intelligence and procedural guidance throughout every step — so
+                the platform meets people where they are, not where a legal process expects
+                them to be.
+              </p>
+            </div>
+          </div>
         </section>
-        <Link
-          href="https://beta.bestlife4u.app"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-8 inline-block bg-[#10b981] text-[#0B1120] px-6 py-3 rounded-lg font-semibold hover:bg-[#059669] transition"
-        >
-          Visit BestLife4U →
-        </Link>
-        <div className="mt-10">
-          <Link
-            href="/"
-            className="inline-block border border-[#10b981] text-[#10b981] px-5 py-3 rounded-lg text-sm font-semibold hover:bg-[#10b981] hover:text-[#0B1120] transition"
-          >
-            ← Back to Home
-          </Link>
-        </div>
       </div>
     </main>
   );

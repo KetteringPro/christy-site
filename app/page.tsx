@@ -1,20 +1,20 @@
 export const metadata = {
   metadataBase: new URL("https://christy.ketteringpro.com"),
-  title: "Christy Kettering  | Founder & Writer",
+  title: "Christy Kettering | Fractional AI Systems Architect + Engineer",
   description:
-    "Building a portfolio of AI-enabled ventures through ketteringPro Enterprise. Writer and producer of 'From Chaos to Clarity' — a romantic dramedy about entrepreneurship and life intertwined.",
+    "Building a portfolio of AI-enabled ventures across service industries — and available as a Fractional AI Systems Architect + Engineer. Let your process drive the technology.",
   openGraph: {
-    title: "Christy Kettering  | Founder & Writer",
+    title: "Christy Kettering | Fractional AI Systems Architect + Engineer",
     description:
-      "Building a portfolio of AI-enabled ventures. Writer and producer of 'From Chaos to Clarity' — a romantic dramedy about entrepreneurship and life intertwined.",
+      "Building a portfolio of AI-enabled ventures across service industries. Fractional AI Systems Architect + Engineer — bespoke solutions built around your operating model.",
     url: "https://christy.ketteringpro.com",
-    siteName: "Christy Kettering ",
+    siteName: "Christy Kettering",
     images: [
       {
         url: "/images/social-preview.jpg",
         width: 1200,
         height: 630,
-        alt: "Christy Kettering  - Portfolio Preview",
+        alt: "Christy Kettering - Portfolio Preview",
       },
     ],
     locale: "en_US",
@@ -22,9 +22,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Christy Kettering  | Founder & Writer",
+    title: "Christy Kettering | Fractional AI Systems Architect + Engineer",
     description:
-      "Building a portfolio of AI-enabled ventures. Writer and producer of 'From Chaos to Clarity' — a romantic dramedy about entrepreneurship and life intertwined.",
+      "Building a portfolio of AI-enabled ventures across service industries. Fractional AI Systems Architect + Engineer — bespoke solutions built around your operating model.",
     images: ["/images/social-preview.jpg"],
   },
 };
@@ -153,10 +153,10 @@ export default function Home() {
                 Christy Kettering 
               </h1>
               <p className="mt-3 text-lg md:text-xl text-[#CBD5E1]">
-                Founder & CEO, ketteringPro Enterprise • Writer & Producer
+                Founder & CEO, ketteringPro Enterprise • Fractional AI Systems Architect + Engineer
               </p>
               <p className="mt-4 text-base md:text-lg text-[#CBD5E1] max-w-2xl">
-                Building a portfolio of ventures that merge AI, lifestyle, and service innovation — from automation tools to festival travel experiences. I also write and produce "From Chaos to Clarity," a romantic dramedy inspired by the chaos of building multiple companies while actually living life. Turns out bringing clarity to business problems doesn't mean your personal life follows a strategic plan.
+                Building a portfolio of AI-enabled ventures across service industries — and available as a Fractional AI Systems Architect + Engineer for organizations ready to move faster than their vendors will let them. I design and build bespoke solutions around your operating model. Let your process drive the technology.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <Link
@@ -212,10 +212,10 @@ export default function Home() {
       <Section id="contact">
         <div className="rounded-2xl border border-slate-700 p-8 bg-[#1E293B]">
           <h2 className="text-2xl font-semibold text-[#FFFFFF]">
-            Let’s Build Something Exceptional
+            Ready to stop waiting on vendors and start shipping solutions?
           </h2>
-          <p className="mt-3 text-[#E2E8F0]">
-            Looking for a strategist who can help bring your next big idea to life?
+          <p className="mt-3 text-[#E2E8F0] font-medium">
+            Let your process drive the technology.
           </p>
           <a
             href="mailto:christy@ketteringpro.com"
