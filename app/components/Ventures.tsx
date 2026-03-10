@@ -111,8 +111,16 @@ const bespokeBuilds = [
   },
 ];
 
-// Lifestyle & Content — Row 1: QuickBitesQueen | Savor.Sip.Sail., Row 2: Groovin' Fly (full-width)
+// Lifestyle & Content — Row 1: The Coastal Fork | QuickBitesQueen, Row 2: Savor.Sip.Sail. | Groovin' Fly
 const lifestyle = [
+  {
+    name: "The Coastal Fork",
+    slug: "/ventures/coastal-fork",
+    status: "Active",
+    tagline: "New England food media built for people who love to eat.",
+    problem:
+      "Real restaurants, real food, real stories worth sharing.",
+  },
   {
     name: "QuickBitesQueen",
     slug: "/ventures/quickbitesqueen",
@@ -350,9 +358,13 @@ export default function Ventures() {
       <SectionHeader label="Bespoke Builds" />
       <ThreeCardGrid items={bespokeBuilds} className="mb-2" />
 
-      {/* LIFESTYLE & CONTENT — 2+1 */}
+      {/* LIFESTYLE & CONTENT — 2×2 grid */}
       <SectionHeader label="Lifestyle & Content" />
-      <ThreeCardGrid items={lifestyle} className="mb-8" />
+      <div className="grid md:grid-cols-2 gap-6 mb-8">
+        {lifestyle.map((v) => (
+          <VentureCardExpandable key={v.name} v={v} />
+        ))}
+      </div>
 
       {/* ANCHOR - Productions */}
       <Link
